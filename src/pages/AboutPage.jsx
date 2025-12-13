@@ -72,7 +72,7 @@ const AboutPage = () => {
           <ul className="list-disc space-y-1 pl-5 text-sm text-slate-300">
             <li>동양미래대학교 컴퓨터소프트웨어공학과 2학년 재학중</li>
             <li>동양미래대학교 컴퓨터소프트웨어공학과 전공동아리 EL 23기</li>
-            <li>동양미래대학교 UMC-web-9th web 파트원</li>
+            <li>동양미래대학교 UMC-web-9th 파트원</li>
           </ul>
           <div className="flex flex-wrap gap-3">
             <a
@@ -157,7 +157,7 @@ const AboutPage = () => {
             </div>
             <div>
               <p className="font-semibold text-white">Backend</p>
-              <p>Java Servlet/JSP, MVC 패턴, JDBC, (추가로 배우면 Spring)</p>
+              <p>Java Servlet/JSP, MVC 패턴, JDBC</p>
             </div>
             <div>
               <p className="font-semibold text-white">Database</p>

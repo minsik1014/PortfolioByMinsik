@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>배송 현황 | NAMTANG</title>
+  <style>
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 40px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #222;
+    }
+
+    .info {
+      margin-bottom: 30px;
+      font-size: 15px;
+      color: #555;
+    }
+
+    .step {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .circle {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background-color: #ccc;
+      margin-right: 10px;
+      position: relative;
+    }
+
+    .circle.active {
+      background-color: #000;
+    }
+
+    .step-label {
+      font-size: 16px;
+      color: #333;
+    }
+
+    .line {
+      width: 2px;
+      height: 20px;
+      background-color: #ccc;
+      margin: 0 11px;
+    }
+
+    .circle.active + .line {
+      background-color: #000;
+    }
+
+    .back-btn {
+      margin-top: 30px;
+      padding: 10px 20px;
+      background-color: #222;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .back-btn:hover {
+      background-color: #444;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>배송 현황</h1>
+    <div class="info">
+      주문번호: 20250608123456<br>
+      상품명: 남성용 코트 | 검정 | L
+    </div>
+
+    <!-- 배송 단계 -->
+    <div class="step">
+      <div class="circle active"></div>
+      <div class="step-label">주문 접수</div>
+    </div>
+    <div class="line"></div>
+
+    <div class="step">
+      <div class="circle active"></div>
+      <div class="step-label">상품 준비중</div>
+    </div>
+    <div class="line"></div>
+
+    <div class="step">
+      <div class="circle active"></div>
+      <div class="step-label">배송 중</div>
+    </div>
+    <div class="line"></div>
+
+    <div class="step">
+      <div class="circle"></div>
+      <div class="step-label">배송 완료</div>
+    </div>
+
+    <a href="myPage.html" class="back-btn">← 마이페이지로 돌아가기</a>
+  </div>
+</body>
+</html>
