@@ -5,6 +5,21 @@ import StatBar from '../components/common/StatBar'
 
 const experiences = [
   {
+    id: 'scout-startup',
+    title: '2025 SCOUT BOOTSTUP 스타트업 경진대회 – 대상',
+    period: '2025',
+    role: '서비스 기획 및 비즈니스 모델 수립',
+    detail: '4개 대학 주관 창업경진대회에 참가하여 독창적인 아이디어와 비즈니스 모델의 가능성을 인정받아 대상 수상.',
+  },
+  {
+    id: 'umc-demo',
+    title: '9th UMC DEMO DAY – 우수상',
+    period: '2025',
+    role: '팀 playproof 프론트엔드 팀장 · 프로젝트 발표',
+    detail: 'UMC 9th 활동 중 팀 playproof의 프론트엔드 팀장으로서 프로젝트를 리드하고, 데모데이에서 기술력과 서비스 완성도를 인정받아 우수상 수상.',
+  },
+  {
+    id: 'kes-2025',
     title: '한국전자전(KES 2025) – 산업 안전교육 플랫폼 출전',
     period: '2025',
     role: '산업 안전교육 대시보드 React/Vite 개발 · 엑셀 업로드/교육 일정/수강자 관리 구현',
@@ -12,6 +27,7 @@ const experiences = [
       '동양미래대학교 전공 동아리 팀으로 산업 안전교육 플랫폼을 기획·구현하고, 관리자용 그래프/대시보드와 엑셀 업로드 흐름을 전시용으로 완성.',
   },
   {
+    id: 'ideal-2025',
     title: '전공 동아리 하계 프로젝트 IDEAL – 협업 코딩 플랫폼',
     period: '2025 하계',
     role: '서비스 기획 · 코드 에디터/채팅/세션 구조 설계 · 기술 스택 검토',
@@ -19,6 +35,7 @@ const experiences = [
       '협업 코딩/라이브 코딩 플랫폼의 기능 정의, 화면 흐름, 실시간 통신/에디터 라이브러리 적용 방안을 팀과 함께 설계.',
   },
   {
+    id: 'expo-2025',
     title: '동양미래대학교 EXPO 2025 – 우수상',
     period: '2025',
     role: '발표 및 데모 준비 · 기획/화면/기술 정리',
@@ -26,6 +43,7 @@ const experiences = [
       '팀 프로젝트를 문제 정의 → 해결 방식 → 기대 효과 순으로 정리하고, 실제 동작하는 데모와 함께 발표하여 우수상 수상.',
   },
   {
+    id: 'g-valley',
     title: '동양미래대학교 G-Valley 작품 참가',
     period: '2025',
     role: '서비스 구조/주요 기능/기술 스택 정리 및 전시 설명',
@@ -33,11 +51,12 @@ const experiences = [
       '교내 프로젝트를 기반으로 전시용 자료를 준비하고, 방문자·평가자에게 서비스 컨셉과 기능을 설명하며 피드백 수집.',
   },
   {
-    title: '구로구 RISE 사업 – 기획 참여',
-    period: '2025 (진행 중)',
-    role: '선발 인원으로 서비스 기획·요구사항 정의 참여',
+    id: 'rise-2025',
+    title: '구로구 RISE 사업 – 우수상',
+    period: '2025',
+    role: '지역 문제 해결 서비스 기획 및 요구사항 정의',
     detail:
-      '지역 문제 해결을 위한 디지털 서비스 방향성을 논의하며, 페이지 플로우와 기능 우선순위를 잡는 기획 초기 단계에 참여 중.',
+      '지역 문제 해결을 위한 디지털 서비스 방향성을 논의하고 기획 초기 단계부터 참여하여 우수상 수상.',
   },
 ]
 
@@ -70,9 +89,11 @@ const AboutPage = () => {
             </div>
           </div>
           <ul className="list-disc space-y-1 pl-5 text-sm text-slate-300">
-            <li>동양미래대학교 컴퓨터소프트웨어공학과 2학년 재학중</li>
+            <li>동양미래대학교 컴퓨터소프트웨어공학과 3학년 재학중</li>
             <li>동양미래대학교 컴퓨터소프트웨어공학과 전공동아리 EL 23기</li>
-            <li>동양미래대학교 UMC-web-9th 파트원</li>
+            <li>동양미래대학교 UMC-9th 파트원</li>
+            <li>동양미래대학교 UMC-9th PlayProof 팀장</li>
+            <li>동양미래대학교 UMC-10th 웹 파트장</li>
           </ul>
           <div className="flex flex-wrap gap-3">
             <a
@@ -128,10 +149,7 @@ const AboutPage = () => {
               있다는 자신감과 실행력을 가지고 있습니다.
             </p>
             <p>
-              최근에는 구로구 RISE 사업 선별 인원으로 참여하여 기획 단계부터 프로젝트를 진행 중입니다. 서비스
-              기획–설계–구현까지 전체 흐름을 이해하고 참여하는 개발자가 되고 싶습니다. 다양한 프로젝트로 쌓은
-              경험과 성실함을 바탕으로, 팀에 오래 함께 가도 부담 없는, 믿고 맡길 수 있는 개발자가 되는 것이
-              목표입니다.
+              최근에는 2025 SCOUT BOOTSTUP 스타트업 경진대회 대상, 9th UMC DEMO DAY 우수상, 구로구 RISE 사업 우수상 등 다양한 대회와 사업에서 성과를 거두며 기획부터 구현까지의 역량을 증명하고 있습니다. 특히 UMC 9기 데모데이 당시 웹 팀장을 맡아 팀원들을 이끌며 협업을 주도하고 프로젝트를 성공적으로 완수한 경험이 있습니다. 서비스 기획–설계–구현까지 전체 흐름을 이해하고 참여하는 개발자가 되고 싶습니다. 다양한 프로젝트로 쌓은 경험과 성실함을 바탕으로, 팀에 오래 함께 가도 부담 없는, 믿고 맡길 수 있는 개발자가 되는 것이 목표입니다.
             </p>
           </div>
         </div>
@@ -178,24 +196,34 @@ const AboutPage = () => {
       <div className="grid gap-6 lg:grid-cols-3">
         <div className="lg:col-span-2 space-y-3 rounded-3xl border border-white/10 bg-white/5 p-6 shadow shadow-cyan-500/10 backdrop-blur">
           <h2 className="text-xl font-bold text-white">Experience / Activity</h2>
-          <div className="space-y-3">
+          <div className="space-y-4">
             {experiences.length === 0 ? (
               <div className="rounded-2xl border border-dashed border-white/20 bg-slate-900/50 p-4 text-sm text-slate-300">
                 경험/활동을 채워 넣어주세요.
               </div>
             ) : (
               experiences.map((exp) => (
-                <div
-                  key={exp.title}
-                  className="rounded-2xl border border-white/10 bg-slate-900/50 p-4"
+                <Link
+                  key={exp.id}
+                  to={`/awards/${exp.id}`}
+                  className="group block transform-gpu transition-all duration-300 hover:-translate-y-2 hover:rotate-1 hover:scale-[1.02]"
                 >
-                  <div className="flex flex-wrap items-center justify-between gap-2">
-                    <div className="text-white font-semibold">{exp.title}</div>
-                    <span className="text-xs text-amber-200">{exp.period}</span>
+                  <div className="rounded-2xl border border-white/10 bg-slate-900/50 p-4 shadow-lg ring-1 ring-white/5 transition-all group-hover:bg-slate-800/80 group-hover:shadow-cyan-500/20 group-hover:ring-cyan-500/30">
+                    <div className="flex flex-wrap items-center justify-between gap-2">
+                      <div className="text-white font-semibold transition-colors group-hover:text-cyan-300">
+                        {exp.title}
+                      </div>
+                      <span className="text-xs text-amber-200">{exp.period}</span>
+                    </div>
+                    <p className="text-sm text-amber-100/80">{exp.role}</p>
+                    <p className="mt-1 text-sm text-slate-400 group-hover:text-slate-300">
+                      {exp.detail}
+                    </p>
+                    <div className="mt-2 flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider text-cyan-400 opacity-0 transition-opacity group-hover:opacity-100">
+                      View Certificate <span>→</span>
+                    </div>
                   </div>
-                  <p className="text-sm text-amber-100">{exp.role}</p>
-                  <p className="text-sm text-slate-300">{exp.detail}</p>
-                </div>
+                </Link>
               ))
             )}
           </div>

@@ -31,7 +31,7 @@ const HomePage = () => {
           </Link>
         </div>
         <div className="flex flex-wrap gap-2">
-          <Badge label="Frontend x 6" variant="frontend" />
+          <Badge label="Frontend x 7" variant="frontend" />
           <Badge label="Backend x 1" variant="backend" />
         </div>
       </div>
@@ -62,13 +62,13 @@ const HomePage = () => {
             <div className="flex items-center justify-between text-xs text-amber-100">
               <span>현재 상태</span>
               <span className="font-semibold text-white">
-                Frontend 6 · Backend 1 (도감 기준)
+                Frontend 7 · Backend 1 (도감 기준)
               </span>
             </div>
             <div className="mt-3 grid gap-2">
-              <StatBar label="Frontend" value={78} />
+              <StatBar label="Frontend" value={82} />
               <StatBar label="Backend" value={60} />
-              <StatBar label="Arch/Perf" value={65} />
+              <StatBar label="Arch/Perf" value={72} />
             </div>
           </div>
         </div>

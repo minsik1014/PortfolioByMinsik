@@ -135,15 +135,29 @@ const ProjectDetailPage = () => {
             <h2 className="text-xl font-bold text-white">실행 영상</h2>
             {project.links?.video ? (
               <div className="space-y-3">
-                <div className="overflow-hidden rounded-2xl border border-white/10 bg-black">
-                  <video
-                    src={project.links.video}
-                    controls
-                    className="h-auto w-full"
-                    preload="metadata"
-                  >
-                    브라우저에서 비디오를 재생할 수 없습니다.
-                  </video>
+                <div className="overflow-hidden rounded-2xl border border-white/10 bg-black aspect-video">
+                  {project.links.video.includes('youtube.com') || project.links.video.includes('youtu.be') ? (
+                    <iframe
+                      src={
+                        project.links.video.includes('watch?v=')
+                          ? project.links.video.replace('watch?v=', 'embed/')
+                          : project.links.video.replace('youtu.be/', 'www.youtube.com/embed/')
+                      }
+                      title={`${project.name} 실행 영상`}
+                      className="h-full w-full border-0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
+                  ) : (
+                    <video
+                      src={project.links.video}
+                      controls
+                      className="h-auto w-full"
+                      preload="metadata"
+                    >
+                      브라우저에서 비디오를 재생할 수 없습니다.
+                    </video>
+                  )}
                 </div>
               </div>
             ) : (

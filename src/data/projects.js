@@ -10,6 +10,46 @@ export const projectTypes = [
 export const projects = [
   {
     id: 1,
+    slug: 'playproof',
+    name: 'PlayProof (게임 팀워크 관리 플랫폼)',
+    summary:
+      '단순 매칭을 넘어 지속 가능한 게임 팀워크를 관리하는 신뢰 기반 게이밍 커뮤니티 플랫폼',
+    types: ['frontend'],
+    stacks: ['React', 'TypeScript', 'TanStack Query', 'Zustand', 'TailwindCSS'],
+    status: 'completed',
+    stats: { frontend: 88, backend: 45, cs: 75, ux: 82 },
+    period: '2025.09 - 2025.11 (완료)',
+    role: '프론트엔드 팀장 · 전체 구조 설계 및 주요 기능 구현',
+    tech: [
+      'React 18',
+      'TypeScript',
+      'Vite',
+      'TanStack Query',
+      'Zustand',
+      'TailwindCSS 4.0',
+      'Axios',
+      'React Router DOM',
+      'React Day Picker',
+    ],
+    highlights: [
+      'UMC 9th 데모데이 우수상 수상 (73팀 중 선정)',
+      'Feature-based 아키텍처 도입으로 대규모 기능의 유지보수성 및 확장성 확보',
+      '파티 찾기, 아지트(실시간 채팅/스케줄), 커뮤니티, 상점 등 핵심 도메인 단독/주도 구현',
+      'TanStack Query와 Zustand를 활용해 서버 상태와 클라이언트 상태를 명확히 분리',
+      '게임별 동적 UI 로직 및 사용자 권한 기반의 조건부 렌더링/인터랙션 설계',
+    ],
+    responsibilities:
+      '프론트엔드 팀장으로서 전체 아키텍처 설계, 프로젝트 초기 환경 구성, 배포 파이프라인 구축을 담당했습니다. 또한 홈, 매칭 시스템, 팀 아지트, 커뮤니티, 상점 등 서비스의 핵심이 되는 대다수의 기능을 직접 구현하고 협업을 리드했습니다.',
+    description:
+      'PlayProof는 일회성 매칭의 한계를 넘어 게이머들이 지속적으로 신뢰하며 활동할 수 있는 환경을 제공하는 플랫폼입니다. 팀 전용 공간인 "아지트"를 통해 실시간 소통과 일정 관리를 지원하며, 매너 점수와 전적 연동으로 신뢰도를 높였습니다. 팀장으로서 복잡한 사용자 흐름을 Seamless하게 연결하고, 고도화된 상태 관리와 인터랙션 로직을 통해 팀워크 관리의 효율성을 극대화했습니다.',
+    links: {
+      demo: 'https://playproof-frontend.vercel.app/',
+      repo: 'https://github.com/Playproof-Umc/Playproof-Frontend',
+      video: 'https://www.youtube.com/watch?v=ZmZQbqu7PIU',
+    },
+  },
+  {
+    id: 2,
     slug: 'glife-safety-dashboard',
     name: 'GLife (산업안전교육 플랫폼)',
     summary:
@@ -47,16 +87,16 @@ export const projects = [
     },
   },
   {
-    id: 2,
+    id: 3,
     slug: 'child-of-weather',
     name: 'ChildOfWeather',
     summary:
       '개인 맞춤형 날씨 기반 활동/경로 관리 웹 서비스. 실제 동작하는 화면과 백엔드 로직 구현.',
     types: ['fullstack', 'frontend', 'backend'],
     stacks: ['Java', 'Servlet/JSP', 'JDBC', 'MySQL', 'Tailwind'],
-    status: 'in-progress',
+    status: 'completed',
     stats: { frontend: 60, backend: 75, cs: 60, ux: 55 },
-    period: '2025.10 - 진행중',
+    period: '2025.10 - 2025.12 (완료)',
     role: '기획 · 프런트 · 백엔드(서블릿/JSP)',
     tech: [
       'Java',
@@ -87,7 +127,7 @@ export const projects = [
     },
   },
   {
-    id: 3,
+    id: 4,
     slug: 'sign-language-translator',
     name: '수어(수화) 번역 웹 앱',
     summary: '수어 번역 UI 프로토타입 (기획/프론트 단계, 중단)',
@@ -114,7 +154,7 @@ export const projects = [
     },
   },
   {
-    id: 4,
+    id: 5,
     slug: 'livecoder',
     name: 'LiveCoder (실시간 코딩 협업 플랫폼)',
     summary:
@@ -150,7 +190,7 @@ export const projects = [
     },
   },
   {
-    id: 5,
+    id: 6,
     slug: 'pokemon-data-dashboard',
     name: '포켓몬 데이터 분석 대시보드 (Streamlit)',
     summary:
@@ -178,7 +218,7 @@ export const projects = [
     },
   },
   {
-    id: 6,
+    id: 7,
     slug: 'lifecontrol',
     name: 'LifeControl',
     summary:
@@ -206,7 +246,7 @@ export const projects = [
     },
   },
   {
-    id: 7,
+    id: 8,
     slug: 'namtang-mypage-demo',
     name: 'NAMTANG 마이페이지 데모',
     summary:

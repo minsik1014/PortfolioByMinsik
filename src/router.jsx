@@ -5,6 +5,7 @@ import PokedexPage from './pages/PokedexPage'
 import ProjectDetailPage from './pages/ProjectDetailPage'
 import AboutPage from './pages/AboutPage'
 import StacksPage from './pages/StacksPage'
+import AwardDetailPage from './pages/AwardDetailPage'
 import NotFoundPage from './pages/NotFoundPage'
 
 export const router = createBrowserRouter([
@@ -16,6 +17,7 @@ export const router = createBrowserRouter([
       { path: '/pokedex/:slug', element: <ProjectDetailPage /> },
       { path: '/about', element: <AboutPage /> },
       { path: '/stacks', element: <StacksPage /> },
+      { path: '/awards/:id', element: <AwardDetailPage /> },
       { path: '*', element: <NotFoundPage /> },
     ],
   },
