@@ -1,4 +1,6 @@
 import { Link, NavLink } from 'react-router-dom'
+import { Sun, Moon } from 'lucide-react'
+import { useTheme } from '../../context/ThemeContext'
 
 const links = [
   { to: '/', label: 'Home' },
@@ -7,6 +9,8 @@ const links = [
 ]
 
 const Navbar = () => {
+  const { isDark, toggleTheme } = useTheme()
+
   return (
     <header className="flex items-center justify-between gap-4 pt-8">
       <Link to="/" className="flex items-center gap-3">
@@ -39,10 +43,17 @@ const Navbar = () => {
           <p className="text-xs uppercase tracking-[0.2em] text-amber-200/70">
             Portfolio
           </p>
-          <p className="text-lg font-semibold text-white">Pokedex Edition</p>
+          <p className="text-lg font-semibold dark:text-white text-slate-900 transition-colors">Pokedex Edition</p>
         </div>
       </Link>
-      <nav className="flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-2 py-1 shadow-lg shadow-cyan-500/5 backdrop-blur">
+      <nav className="flex items-center gap-3 rounded-full border border-slate-900/10 dark:border-white/10 bg-white/5 px-2 py-1 shadow-lg shadow-cyan-500/5 backdrop-blur transition-colors">
+        <button
+          onClick={toggleTheme}
+          className="flex h-9 w-9 items-center justify-center rounded-full transition-colors text-slate-600 dark:text-slate-200 hover:bg-slate-900/5 dark:hover:bg-white/10"
+          aria-label="Toggle Theme"
+        >
+          {isDark ? <Sun size={20} /> : <Moon size={20} />}
+        </button>
         {links.map((link) => (
           <NavLink
             key={link.to}
@@ -51,7 +62,7 @@ const Navbar = () => {
               `px-4 py-2 text-sm font-medium transition ${
                 isActive
                   ? 'text-slate-900 bg-amber-300 rounded-full'
-                  : 'text-slate-200 hover:text-white'
+                  : 'dark:text-slate-200 text-slate-600 hover:dark:text-white hover:text-slate-900'
               }`
             }
           >

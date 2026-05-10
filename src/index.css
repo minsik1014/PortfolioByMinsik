@@ -1,7 +1,24 @@
 @import 'tailwindcss';
 
+/* Tailwind 4에서 클래스 기반 다크모드를 활성화하는 가장 확실한 방법 */
+@custom-variant dark (&:where(.dark, .dark *));
+
 @layer base {
   body {
-    @apply bg-slate-900 text-slate-50;
+    @apply bg-slate-50 text-slate-900 transition-colors duration-300;
   }
+}
+
+/* 다크 모드일 때 바디 배경색 강제 적용 */
+.dark body {
+  background-color: #020617; /* slate-950 */
+  color: #f8fafc; /* slate-50 */
+}
+
+:root {
+  color-scheme: light;
+}
+
+:root.dark {
+  color-scheme: dark;
 }

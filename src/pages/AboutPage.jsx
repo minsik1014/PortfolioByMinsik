@@ -64,23 +64,23 @@ const AboutPage = () => {
   return (
     <section className="space-y-8">
       <div className="grid gap-6 lg:grid-cols-3">
-        <div className="space-y-4 rounded-3xl border border-white/10 bg-white/5 p-6 shadow shadow-cyan-500/10 backdrop-blur lg:col-span-2">
-          <p className="text-xs uppercase tracking-[0.2em] text-amber-200">
+        <div className="space-y-4 rounded-3xl border border-slate-900/10 dark:border-white/10 bg-white dark:bg-white/5 p-6 shadow-lg shadow-slate-200/50 dark:shadow-cyan-500/10 backdrop-blur lg:col-span-2 transition-colors">
+          <p className="text-xs uppercase tracking-[0.2em] text-amber-600 dark:text-amber-200 transition-colors">
             Trainer Card
           </p>
-          <h1 className="text-3xl font-black text-white">Elric-심민식</h1>
-          <p className="text-lg font-semibold text-amber-200">
+          <h1 className="text-3xl font-black text-slate-900 dark:text-white transition-colors">Elric-심민식</h1>
+          <p className="text-lg font-semibold text-amber-700 dark:text-amber-200 transition-colors">
             다양한 프로젝트를 진행해보며 실무능력을 키우고 있는 프런트엔드 개발자 Elric/심민식입니다.
           </p>
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-            <div className="flex items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-slate-900/50 p-2">
+            <div className="flex items-center justify-center overflow-hidden rounded-2xl border border-slate-900/10 dark:border-white/10 bg-slate-100 dark:bg-slate-900/50 p-2 transition-colors">
               <img
                 src={trainerPhoto}
                 alt="트레이너 심민식 프로필"
                 className="w-full max-h-80 rounded-xl object-contain"
               />
             </div>
-            <div className="flex items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-slate-900/50 p-2">
+            <div className="flex items-center justify-center overflow-hidden rounded-2xl border border-slate-900/10 dark:border-white/10 bg-slate-100 dark:bg-slate-900/50 p-2 transition-colors">
               <img
                 src={trainerPhoto2}
                 alt="트레이너 심민식 프로필 2"
@@ -88,7 +88,7 @@ const AboutPage = () => {
               />
             </div>
           </div>
-          <ul className="list-disc space-y-1 pl-5 text-sm text-slate-300">
+          <ul className="list-disc space-y-1 pl-5 text-sm text-slate-600 dark:text-slate-300 transition-colors">
             <li>동양미래대학교 컴퓨터소프트웨어공학과 3학년 재학중</li>
             <li>동양미래대학교 컴퓨터소프트웨어공학과 전공동아리 EL 23기</li>
             <li>동양미래대학교 UMC-9th 파트원</li>
@@ -100,14 +100,14 @@ const AboutPage = () => {
               href="https://github.com/minsik1014/minsik1014"
               target="_blank"
               rel="noreferrer"
-              className="rounded-full border border-white/20 bg-white/5 px-4 py-2 text-sm font-semibold text-white transition hover:border-amber-300/60 hover:text-amber-100"
+              className="rounded-full border border-slate-900/20 dark:border-white/20 bg-slate-100 dark:bg-white/5 px-4 py-2 text-sm font-semibold text-slate-900 dark:text-white transition hover:border-amber-500/60 dark:hover:border-amber-300/60 hover:text-amber-600 dark:hover:text-amber-100"
             >
               GitHub
             </a>
             
             <a
               href="mailto:ms03zzang@naver.com"
-              className="rounded-full border border-white/20 bg-amber-300/10 px-4 py-2 text-sm font-semibold text-amber-100 transition hover:border-amber-200 hover:bg-amber-200/20"
+              className="rounded-full border border-amber-300/40 dark:border-white/20 bg-amber-50 dark:bg-amber-300/10 px-4 py-2 text-sm font-semibold text-amber-700 dark:text-amber-100 transition hover:border-amber-400 dark:hover:border-amber-200 hover:bg-amber-100 dark:hover:bg-amber-200/20"
             >
               Email
             </a>
@@ -115,14 +115,14 @@ const AboutPage = () => {
               href="https://www.instagram.com/sharp.sim_03?igsh=MTh0N2Y5amZxZzZ2dw%3D%3D&utm_source=qr"
               target="_blank"
               rel="noreferrer"
-              className="rounded-full border border-white/20 bg-gradient-to-r from-pink-500/40 via-orange-400/30 to-yellow-300/30 px-4 py-2 text-sm font-semibold text-white transition hover:border-amber-300/60 hover:text-amber-100"
+              className="rounded-full border border-slate-900/20 dark:border-white/20 bg-gradient-to-r from-pink-500/20 via-orange-400/15 to-yellow-300/15 dark:from-pink-500/40 dark:via-orange-400/30 dark:to-yellow-300/30 px-4 py-2 text-sm font-semibold text-slate-900 dark:text-white transition hover:border-amber-500/60 dark:hover:border-amber-300/60 hover:text-amber-600 dark:hover:text-amber-100"
             >
               Instagram
             </a>
           </div>
         </div>
-        <div className="rounded-3xl border border-white/10 bg-gradient-to-b from-emerald-500/10 to-slate-900/80 p-6 shadow shadow-emerald-500/20">
-          <h2 className="text-xl font-bold text-white">Battle Stats</h2>
+        <div className="rounded-3xl border border-slate-900/10 dark:border-white/10 bg-gradient-to-b from-emerald-500/5 to-slate-100 dark:from-emerald-500/10 dark:to-slate-900/80 p-6 shadow-lg shadow-emerald-500/10 dark:shadow-emerald-500/20 transition-colors">
+          <h2 className="text-xl font-bold text-slate-900 dark:text-white transition-colors">Battle Stats</h2>
           <div className="mt-4 grid gap-3">
             <StatBar label="Frontend" value={78} />
             <StatBar label="Backend" value={60} />
@@ -133,9 +133,9 @@ const AboutPage = () => {
       </div>
 
       <div className="grid gap-6 lg:grid-cols-3">
-        <div className="space-y-4 rounded-3xl border border-white/10 bg-white/5 p-6 shadow shadow-cyan-500/10 backdrop-blur lg:col-span-2">
-          <h2 className="text-xl font-bold text-white">About Me</h2>
-          <div className="space-y-3 text-slate-200">
+        <div className="space-y-4 rounded-3xl border border-slate-900/10 dark:border-white/10 bg-white dark:bg-white/5 p-6 shadow-lg shadow-slate-200/50 dark:shadow-cyan-500/10 backdrop-blur lg:col-span-2 transition-colors">
+          <h2 className="text-xl font-bold text-slate-900 dark:text-white transition-colors">About Me</h2>
+          <div className="space-y-3 text-slate-700 dark:text-slate-200 transition-colors">
             <p>
               저는 여러 번의 프로젝트 경험을 통해 꾸준함과 성실함으로 성장해온 웹 개발자 지망생입니다.
               한국전자전에서 진행된 EXPO 프로젝트에 참여해 실제 전시 환경에서 서비스 기획·구현 과정을 경험했고,
@@ -154,39 +154,39 @@ const AboutPage = () => {
           </div>
         </div>
 
-        <div className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow shadow-amber-500/10 backdrop-blur">
+        <div className="rounded-3xl border border-slate-900/10 dark:border-white/10 bg-white dark:bg-white/5 p-6 shadow-lg shadow-slate-200/50 dark:shadow-amber-500/10 backdrop-blur transition-colors">
           <div className="flex items-center justify-between gap-3">
-            <h2 className="text-xl font-bold text-white">Stacks</h2>
+            <h2 className="text-xl font-bold text-slate-900 dark:text-white transition-colors">Stacks</h2>
             <Link
               to="/stacks"
-              className="text-xs font-semibold text-amber-200 transition hover:text-amber-100"
+              className="text-xs font-semibold text-amber-600 dark:text-amber-200 transition hover:text-amber-500 dark:hover:text-amber-100"
             >
               더보기 →
             </Link>
           </div>
-          <div className="mt-4 space-y-3 text-sm text-slate-200">
+          <div className="mt-4 space-y-3 text-sm text-slate-700 dark:text-slate-200 transition-colors">
             <div>
-              <p className="font-semibold text-white">Language</p>
+              <p className="font-semibold text-slate-900 dark:text-white transition-colors">Language</p>
               <p>Java, JavaScript/TypeScript, Kotlin, Python, C</p>
             </div>
             <div>
-              <p className="font-semibold text-white">Frontend</p>
+              <p className="font-semibold text-slate-900 dark:text-white transition-colors">Frontend</p>
               <p>React, Vite, TailwindCSS, React Router</p>
             </div>
             <div>
-              <p className="font-semibold text-white">Backend</p>
+              <p className="font-semibold text-slate-900 dark:text-white transition-colors">Backend</p>
               <p>Java Servlet/JSP, MVC 패턴, JDBC</p>
             </div>
             <div>
-              <p className="font-semibold text-white">Database</p>
+              <p className="font-semibold text-slate-900 dark:text-white transition-colors">Database</p>
               <p>MySQL, ERD 설계, 정규화, 기본 SQL 튜닝</p>
             </div>
             <div>
-              <p className="font-semibold text-white">DevOps / Tools</p>
+              <p className="font-semibold text-slate-900 dark:text-white transition-colors">DevOps / Tools</p>
               <p>Git &amp; GitHub (branch 전략, reset/revert 경험), Maven, Node.js, npm, Streamlit, VSCode, IntelliJ, Eclipse, Android Studio</p>
             </div>
             <div>
-              <p className="font-semibold text-white">Etc.</p>
+              <p className="font-semibold text-slate-900 dark:text-white transition-colors">Etc.</p>
               <p>Figma/UI 설계 경험, Notion으로 문서화/정리</p>
             </div>
           </div>
@@ -194,11 +194,11 @@ const AboutPage = () => {
       </div>
 
       <div className="grid gap-6 lg:grid-cols-3">
-        <div className="lg:col-span-2 space-y-3 rounded-3xl border border-white/10 bg-white/5 p-6 shadow shadow-cyan-500/10 backdrop-blur">
-          <h2 className="text-xl font-bold text-white">Experience / Activity</h2>
+        <div className="lg:col-span-2 space-y-3 rounded-3xl border border-slate-900/10 dark:border-white/10 bg-white dark:bg-white/5 p-6 shadow-lg shadow-slate-200/50 dark:shadow-cyan-500/10 backdrop-blur transition-colors">
+          <h2 className="text-xl font-bold text-slate-900 dark:text-white transition-colors">Experience / Activity</h2>
           <div className="space-y-4">
             {experiences.length === 0 ? (
-              <div className="rounded-2xl border border-dashed border-white/20 bg-slate-900/50 p-4 text-sm text-slate-300">
+              <div className="rounded-2xl border border-dashed border-slate-900/20 dark:border-white/20 bg-slate-100 dark:bg-slate-900/50 p-4 text-sm text-slate-500 dark:text-slate-300 transition-colors">
                 경험/활동을 채워 넣어주세요.
               </div>
             ) : (
@@ -208,18 +208,18 @@ const AboutPage = () => {
                   to={`/awards/${exp.id}`}
                   className="group block transform-gpu transition-all duration-300 hover:-translate-y-2 hover:rotate-1 hover:scale-[1.02]"
                 >
-                  <div className="rounded-2xl border border-white/10 bg-slate-900/50 p-4 shadow-lg ring-1 ring-white/5 transition-all group-hover:bg-slate-800/80 group-hover:shadow-cyan-500/20 group-hover:ring-cyan-500/30">
+                  <div className="rounded-2xl border border-slate-900/10 dark:border-white/10 bg-slate-50 dark:bg-slate-900/50 p-4 shadow-lg ring-1 ring-slate-900/5 dark:ring-white/5 transition-all group-hover:bg-white dark:group-hover:bg-slate-800/80 group-hover:shadow-cyan-500/10 dark:group-hover:shadow-cyan-500/20 group-hover:ring-cyan-500/20 dark:group-hover:ring-cyan-500/30">
                     <div className="flex flex-wrap items-center justify-between gap-2">
-                      <div className="text-white font-semibold transition-colors group-hover:text-cyan-300">
+                      <div className="text-slate-900 dark:text-white font-semibold transition-colors group-hover:text-cyan-600 dark:group-hover:text-cyan-300">
                         {exp.title}
                       </div>
-                      <span className="text-xs text-amber-200">{exp.period}</span>
+                      <span className="text-xs text-amber-600 dark:text-amber-200 transition-colors">{exp.period}</span>
                     </div>
-                    <p className="text-sm text-amber-100/80">{exp.role}</p>
-                    <p className="mt-1 text-sm text-slate-400 group-hover:text-slate-300">
+                    <p className="text-sm text-amber-700 dark:text-amber-100/80 transition-colors">{exp.role}</p>
+                    <p className="mt-1 text-sm text-slate-500 dark:text-slate-400 group-hover:text-slate-700 dark:group-hover:text-slate-300 transition-colors">
                       {exp.detail}
                     </p>
-                    <div className="mt-2 flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider text-cyan-400 opacity-0 transition-opacity group-hover:opacity-100">
+                    <div className="mt-2 flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider text-cyan-600 dark:text-cyan-400 opacity-0 transition-opacity group-hover:opacity-100">
                       View Certificate <span>→</span>
                     </div>
                   </div>

@@ -27,19 +27,19 @@ const PokedexPage = () => {
     <section className="space-y-6">
       <div className="flex items-center justify-between gap-4">
         <div>
-          <p className="text-xs uppercase tracking-[0.2em] text-amber-200">
+          <p className="text-xs uppercase tracking-[0.2em] text-amber-600 dark:text-amber-200 transition-colors">
             Project Dex
           </p>
-          <h1 className="text-3xl font-black text-white sm:text-4xl">
+          <h1 className="text-3xl font-black text-slate-900 dark:text-white sm:text-4xl transition-colors">
             프로젝트 도감
           </h1>
-          <p className="text-slate-300">
+          <p className="text-slate-600 dark:text-slate-300 transition-colors">
             타입/스택으로 필터링하고, 원하는 엔트리를 눌러 상세를 확인하세요.
           </p>
         </div>
-        <div className="hidden rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-right text-sm text-amber-100 shadow shadow-cyan-500/20 sm:block">
+        <div className="hidden rounded-2xl border border-slate-900/10 dark:border-white/10 bg-white/5 px-4 py-3 text-right text-sm text-slate-900 dark:text-amber-100 shadow shadow-cyan-500/10 dark:shadow-cyan-500/20 sm:block transition-colors">
           Total Entries
-          <div className="text-3xl font-black text-white">
+          <div className="text-3xl font-black text-slate-900 dark:text-white">
             {filtered.length.toString().padStart(3, '0')}
           </div>
         </div>
@@ -53,7 +53,7 @@ const PokedexPage = () => {
       />
 
       {filtered.length === 0 ? (
-        <div className="rounded-2xl border border-dashed border-white/20 bg-white/5 p-6 text-center text-slate-300">
+        <div className="rounded-2xl border border-dashed border-slate-900/20 dark:border-white/20 bg-slate-900/5 dark:bg-white/5 p-6 text-center text-slate-600 dark:text-slate-300 transition-colors">
           아직 등록된 프로젝트가 없습니다. 엔트리를 추가해 주세요.
         </div>
       ) : (

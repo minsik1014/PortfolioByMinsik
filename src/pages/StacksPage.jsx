@@ -35,34 +35,33 @@ const StacksPage = () => {
   return (
     <section className="space-y-6">
       <header className="space-y-2">
-        <p className="text-xs uppercase tracking-[0.2em] text-amber-200">
+        <p className="text-xs uppercase tracking-[0.2em] text-amber-600 dark:text-amber-200 transition-colors">
           Stacks
         </p>
-        <h1 className="text-3xl font-black text-white">
+        <h1 className="text-3xl font-black text-slate-900 dark:text-white transition-colors">
           사용해본 기술 스택
         </h1>
-        
       </header>
 
-      <div className="overflow-hidden rounded-3xl border border-white/10 bg-white/5 shadow shadow-cyan-500/10 backdrop-blur">
-        <table className="min-w-full divide-y divide-white/10">
-          <thead className="bg-white/5">
+      <div className="overflow-hidden rounded-3xl border border-slate-900/10 dark:border-white/10 bg-white dark:bg-white/5 shadow-lg shadow-slate-200/50 dark:shadow-cyan-500/10 backdrop-blur transition-colors">
+        <table className="min-w-full divide-y divide-slate-900/10 dark:divide-white/10 transition-colors">
+          <thead className="bg-slate-50 dark:bg-white/5 transition-colors">
             <tr>
-              <th className="px-4 py-3 text-left text-sm font-semibold text-white">
+              <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900 dark:text-white transition-colors">
                 분류
               </th>
-              <th className="px-4 py-3 text-left text-sm font-semibold text-white">
+              <th className="px-4 py-3 text-left text-sm font-semibold text-slate-900 dark:text-white transition-colors">
                 기술
               </th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-white/10">
+          <tbody className="divide-y divide-slate-900/10 dark:divide-white/10 transition-colors">
             {stacksData.map((row) => (
-              <tr key={row.category} className="hover:bg-white/5">
-                <td className="whitespace-nowrap px-4 py-3 text-sm font-semibold text-amber-100">
+              <tr key={row.category} className="hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                <td className="whitespace-nowrap px-4 py-3 text-sm font-semibold text-amber-700 dark:text-amber-100 transition-colors">
                   {row.category}
                 </td>
-                <td className="px-4 py-3 text-sm text-slate-200">
+                <td className="px-4 py-3 text-sm text-slate-700 dark:text-slate-200 transition-colors">
                   <ul className="list-disc space-y-1 pl-4">
                     {row.items.map((item) => (
                       <li key={item}>{item}</li>
@@ -76,9 +75,9 @@ const StacksPage = () => {
       </div>
 
       <div className="grid gap-4">
-        <div className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow shadow-amber-500/10 backdrop-blur">
-          <h2 className="text-lg font-bold text-white">웹 / 앱 개발 역량</h2>
-          <ul className="mt-3 space-y-2 text-sm text-slate-200">
+        <div className="rounded-3xl border border-slate-900/10 dark:border-white/10 bg-white dark:bg-white/5 p-6 shadow-lg shadow-slate-200/50 dark:shadow-amber-500/10 backdrop-blur transition-colors">
+          <h2 className="text-lg font-bold text-slate-900 dark:text-white transition-colors">웹 / 앱 개발 역량</h2>
+          <ul className="mt-3 space-y-2 text-sm text-slate-700 dark:text-slate-200 transition-colors">
             <li>주어진 요구사항에 맞게 기능과 UI를 구현할 수 있습니다.</li>
             <li>
               Java Servlet/JSP, React를 사용해 로그인, 마이페이지, 관리자 페이지,
@@ -95,9 +94,9 @@ const StacksPage = () => {
           </ul>
         </div>
 
-        <div className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow shadow-emerald-500/10 backdrop-blur">
-          <h2 className="text-lg font-bold text-white">백엔드 & 데이터베이스</h2>
-          <ul className="mt-3 space-y-2 text-sm text-slate-200">
+        <div className="rounded-3xl border border-slate-900/10 dark:border-white/10 bg-white dark:bg-white/5 p-6 shadow-lg shadow-slate-200/50 dark:shadow-emerald-500/10 backdrop-blur transition-colors">
+          <h2 className="text-lg font-bold text-slate-900 dark:text-white transition-colors">백엔드 & 데이터베이스</h2>
+          <ul className="mt-3 space-y-2 text-sm text-slate-700 dark:text-slate-200 transition-colors">
             <li>Java 기반 백엔드 개발을 할 수 있습니다.</li>
             <li>
               Servlet/JSP, JSTL, 필터, 세션/쿠키를 활용해 인증/인가, 마이페이지,
@@ -130,9 +129,9 @@ const StacksPage = () => {
           </ul>
         </div>
 
-        <div className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow shadow-cyan-500/10 backdrop-blur">
-          <h2 className="text-lg font-bold text-white">프론트엔드 & UI/UX</h2>
-          <ul className="mt-3 space-y-2 text-sm text-slate-200">
+        <div className="rounded-3xl border border-slate-900/10 dark:border-white/10 bg-white dark:bg-white/5 p-6 shadow-lg shadow-slate-200/50 dark:shadow-cyan-500/10 backdrop-blur transition-colors">
+          <h2 className="text-lg font-bold text-slate-900 dark:text-white transition-colors">프론트엔드 & UI/UX</h2>
+          <ul className="mt-3 space-y-2 text-sm text-slate-700 dark:text-slate-200 transition-colors">
             <li>React 기반 SPA 프론트엔드를 개발할 수 있습니다.</li>
             <li>
               React + Vite + React Router를 활용해 페이지 라우팅, 상태 관리, 폼 처리,
@@ -162,9 +161,9 @@ const StacksPage = () => {
           </ul>
         </div>
 
-        <div className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow shadow-amber-500/10 backdrop-blur">
-          <h2 className="text-lg font-bold text-white">데이터 분석 / 스트림릿</h2>
-          <ul className="mt-3 space-y-2 text-sm text-slate-200">
+        <div className="rounded-3xl border border-slate-900/10 dark:border-white/10 bg-white dark:bg-white/5 p-6 shadow-lg shadow-slate-200/50 dark:shadow-amber-500/10 backdrop-blur transition-colors">
+          <h2 className="text-lg font-bold text-slate-900 dark:text-white transition-colors">데이터 분석 / 스트림릿</h2>
+          <ul className="mt-3 space-y-2 text-sm text-slate-700 dark:text-slate-200 transition-colors">
             <li>Python + Pandas를 활용한 데이터 분석 경험이 있습니다.</li>
             <li>
               포켓몬 데이터셋 등을 활용해 전처리, 그룹 분석, 시각화(Matplotlib 등)를
@@ -178,9 +177,9 @@ const StacksPage = () => {
           </ul>
         </div>
 
-        <div className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow shadow-emerald-500/10 backdrop-blur">
-          <h2 className="text-lg font-bold text-white">개발 도구 & 협업</h2>
-          <ul className="mt-3 space-y-2 text-sm text-slate-200">
+        <div className="rounded-3xl border border-slate-900/10 dark:border-white/10 bg-white dark:bg-white/5 p-6 shadow-lg shadow-slate-200/50 dark:shadow-emerald-500/10 backdrop-blur transition-colors">
+          <h2 className="text-lg font-bold text-slate-900 dark:text-white transition-colors">개발 도구 & 협업</h2>
+          <ul className="mt-3 space-y-2 text-sm text-slate-700 dark:text-slate-200 transition-colors">
             <li>Git & GitHub를 활용한 버전 관리에 익숙합니다.</li>
             <li>
               UMC 스터디 및 개인/팀 프로젝트를 GitHub로 관리하며, PR 기반 코드 리뷰
@@ -202,9 +201,9 @@ const StacksPage = () => {
           </ul>
         </div>
 
-        <div className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow shadow-cyan-500/10 backdrop-blur">
-          <h2 className="text-lg font-bold text-white">학습 태도 & 문제 해결</h2>
-          <ul className="mt-3 space-y-2 text-sm text-slate-200">
+        <div className="rounded-3xl border border-slate-900/10 dark:border-white/10 bg-white dark:bg-white/5 p-6 shadow-lg shadow-slate-200/50 dark:shadow-cyan-500/10 backdrop-blur transition-colors">
+          <h2 className="text-lg font-bold text-slate-900 dark:text-white transition-colors">학습 태도 & 문제 해결</h2>
+          <ul className="mt-3 space-y-2 text-sm text-slate-700 dark:text-slate-200 transition-colors">
             <li>
               새로운 기술 스택을 빠르게 학습하고 실제 프로젝트에 적용하는 편입니다.
             </li>

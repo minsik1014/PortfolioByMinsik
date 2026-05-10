@@ -28,25 +28,24 @@ const AwardDetailPage = () => {
   const title = awardTitles[id] || 'Certificate'
 
   return (
-    <div className="flex min-h-[60vh] flex-col items-center justify-center space-y-6 py-10">
+    <div className="flex min-h-[60vh] flex-col items-center justify-center space-y-6 py-10 transition-colors">
       <div className="flex w-full max-w-4xl items-center justify-between px-4">
         <button
           onClick={() => navigate(-1)}
-          className="flex items-center gap-2 text-sm font-bold text-amber-200 transition hover:text-amber-100"
+          className="flex items-center gap-2 text-sm font-bold text-amber-600 dark:text-amber-200 transition hover:text-amber-500 dark:hover:text-amber-100"
         >
           ← 뒤로 가기
         </button>
-        <h1 className="text-xl font-bold text-white sm:text-2xl">{title}</h1>
+        <h1 className="text-xl font-bold text-slate-900 dark:text-white sm:text-2xl transition-colors">{title}</h1>
         <div className="w-20"></div> {/* Spacer */}
       </div>
 
-      <div className="group relative w-full max-w-4xl overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-4 shadow-2xl backdrop-blur-sm">
+      <div className="group relative w-full max-w-4xl overflow-hidden rounded-3xl border border-slate-900/10 dark:border-white/10 bg-white dark:bg-white/5 p-4 shadow-2xl shadow-slate-200/50 dark:shadow-none backdrop-blur-sm transition-colors">
         {/* Decorative corner accents */}
-        <div className="absolute -left-2 -top-2 h-10 w-10 rounded-br-full border-r border-t border-cyan-500/50"></div>
-        <div className="absolute -right-2 -bottom-2 h-10 w-10 rounded-tl-full border-l border-b border-cyan-500/50"></div>
+        <div className="absolute -left-2 -top-2 h-10 w-10 rounded-br-full border-r border-t border-cyan-500/30 dark:border-cyan-500/50"></div>
+        <div className="absolute -right-2 -bottom-2 h-10 w-10 rounded-tl-full border-l border-b border-cyan-500/30 dark:border-cyan-500/50"></div>
         
-        <div className="aspect-[4/3] w-full overflow-hidden rounded-2xl bg-slate-900/80">
-          {/* 실제 이미지가 있으면 img 태그, 없으면 대체 텍스트 표시 */}
+        <div className="aspect-[4/3] w-full overflow-hidden rounded-2xl bg-slate-100 dark:bg-slate-900/80 transition-colors">
           <img
             src={imageSrc}
             alt={title}
@@ -56,7 +55,7 @@ const AwardDetailPage = () => {
               e.target.nextSibling.style.display = 'flex'
             }}
           />
-          <div className="hidden h-full w-full flex-col items-center justify-center space-y-4 text-slate-500">
+          <div className="hidden h-full w-full flex-col items-center justify-center space-y-4 text-slate-400 dark:text-slate-500 transition-colors">
             <svg
               className="h-20 w-20 opacity-20"
               fill="none"
@@ -75,7 +74,7 @@ const AwardDetailPage = () => {
         </div>
       </div>
       
-      <p className="max-w-2xl px-6 text-center text-sm text-slate-400">
+      <p className="max-w-2xl px-6 text-center text-sm text-slate-500 dark:text-slate-400 transition-colors">
         위 이미지는 해당 수상 및 활동의 공식 증명서입니다. 
         자세한 활동 내용은 이전 페이지의 상세 설명을 참고해 주세요.
       </p>

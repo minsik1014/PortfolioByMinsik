@@ -6,26 +6,26 @@ const HomePage = () => {
   return (
     <section className="grid gap-10 lg:grid-cols-2 lg:items-center">
       <div className="space-y-6">
-        <div className="inline-flex items-center gap-2 rounded-full border border-amber-300/40 bg-amber-300/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-amber-200">
+        <div className="inline-flex items-center gap-2 rounded-full border border-amber-500/40 bg-amber-500/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-amber-600 dark:text-amber-200 transition-colors">
           Pokédex Portfolio
         </div>
-        <h1 className="text-5xl font-black leading-[1.1] text-white sm:text-5xl">
+        <h1 className="text-5xl font-black leading-[1.1] text-slate-900 dark:text-white sm:text-5xl transition-colors">
           심민식의 프로젝트 도감
         </h1>
-        <p className="text-sm text-slate-300 sm:text-base">
+        <p className="text-sm text-slate-600 dark:text-slate-300 sm:text-base transition-colors">
           안녕하세요 프런트엔드 개발자 심민식입니다.<br />
           이 도감은 제가 진행한 다양한 프로젝트들과 포트폴리오를 모아놓은 곳입니다.
         </p>
         <div className="flex flex-wrap gap-3">
           <Link
             to="/pokedex"
-            className="rounded-full bg-amber-300 px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-amber-200"
+            className="rounded-full bg-amber-400 px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-amber-300 shadow-lg shadow-amber-500/20"
           >
             도감 열기 (Pokedex)
           </Link>
           <Link
             to="/about"
-            className="rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white transition hover:border-cyan-300/60 hover:text-cyan-100"
+            className="rounded-full border border-slate-900/20 dark:border-white/20 px-6 py-3 text-sm font-semibold text-slate-900 dark:text-white transition hover:border-cyan-500/60 hover:text-cyan-600 dark:hover:text-cyan-100"
           >
             트레이너 정보
           </Link>
