@@ -70,7 +70,7 @@ const experiences = [
 const AboutPage = () => {
   return (
     <section className="space-y-8">
-      <div className="grid gap-6 lg:grid-cols-3">
+      <div className="grid gap-6 lg:grid-cols-3 items-start">
         <div className="space-y-4 rounded-3xl border border-slate-900/10 dark:border-white/10 bg-white dark:bg-white/5 p-6 shadow-lg shadow-slate-200/50 dark:shadow-cyan-500/10 backdrop-blur lg:col-span-2 transition-colors">
           <p className="text-xs uppercase tracking-[0.2em] text-amber-600 dark:text-amber-200 transition-colors">
             Trainer Card
@@ -130,12 +130,23 @@ const AboutPage = () => {
           </div>
         </div>
         <div className="rounded-3xl border border-slate-900/10 dark:border-white/10 bg-gradient-to-b from-emerald-500/5 to-slate-100 dark:from-emerald-500/10 dark:to-slate-900/80 p-6 shadow-lg shadow-emerald-500/10 dark:shadow-emerald-500/20 transition-colors">
-          <h2 className="text-xl font-bold text-slate-900 dark:text-white transition-colors">Battle Stats</h2>
-          <div className="mt-4 grid gap-3">
+          <div className="flex items-center justify-between">
+            <h2 className="text-xl font-bold text-slate-900 dark:text-white transition-colors">Battle Stats</h2>
+            <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-600 dark:text-emerald-400">Level. 23</span>
+          </div>
+          <div className="mt-4 grid gap-3 sm:grid-cols-1">
             <StatBar label="Frontend" value={85} />
-            <StatBar label="Backend" value={45} />
+            <StatBar label="UI/UX" value={82} />
+            <StatBar label="Collaboration" value={88} />
             <StatBar label="Architecture" value={75} />
+            <StatBar label="Tooling" value={65} />
+            <StatBar label="Backend" value={45} />
             <StatBar label="CS" value={58} />
+          </div>
+          <div className="mt-6 rounded-2xl bg-white/50 dark:bg-black/20 p-3 border border-emerald-500/10">
+            <p className="text-[10px] uppercase tracking-tighter text-slate-500 dark:text-slate-400 leading-tight">
+              * 위 스탯은 프로젝트 경험과 자기 객관화를 바탕으로 산정된 수치이며, 협업과 프런트엔드 기술 구현에 특화되어 있습니다.
+            </p>
           </div>
         </div>
       </div>
