@@ -50,6 +50,41 @@ export const projects = [
   },
   {
     id: 2,
+    slug: 'gusring',
+    name: 'Gusring (다국어 민원행정 서비스)',
+    summary:
+      '외국인 거주자를 위한 다국어 민원행정 서식 폼 제공 및 언어별 서식 분류 서비스',
+    types: ['frontend'],
+    stacks: ['React', 'Vite', 'TailwindCSS', 'Vercel'],
+    status: '진행 중',
+    stats: { frontend: 88, backend: 12, cs: 50, ux: 85 },
+    period: '2026.03 - 진행 중',
+    role: '프런트엔드 배포 및 최적화 · 다국어 서식 분류',
+    tech: [
+      'React',
+      'Vite',
+      'TailwindCSS',
+      'Vercel',
+      'Performance Optimization',
+    ],
+    highlights: [
+      '2026 구로구 RISE 리빙랩 사업 참여 프로젝트',
+      'Vercel을 통한 프런트엔드 배포 환경 구축 및 운영',
+      '다양한 언어로 구성된 민원 서식을 체계적으로 분류하고 관리하는 로직 설계',
+      'Lighthouse 기반 성능 분석을 통한 프런트엔드 로딩 속도 최적화 기여',
+    ],
+    responsibilities:
+      'Vercel을 이용한 서비스 배포 및 성능 최적화를 담당하였으며, 여러 언어로 구성된 민원 서식을 효율적으로 분류하고 관리하는 구조를 구현했습니다.',
+    description:
+      '구스링(Gusring)은 한국 내 외국인 거주자들이 행정 서식을 쉽게 작성할 수 있도록 돕는 서비스입니다. 개발 과정에서 서비스의 안정적인 배포와 빠른 응답 속도를 위한 최적화 작업에 집중했으며, 사용자 편의를 위해 다국어 서식 분류 체계를 구축했습니다.',
+    links: {
+      demo: 'https://gusring-web.vercel.app/',
+      repo: 'https://github.com/gusring/gusring-web',
+      video: '',
+    },
+  },
+  {
+    id: 3,
     slug: 'glife-safety-dashboard',
     name: 'GLife (산업안전교육 플랫폼)',
     summary:
@@ -87,7 +122,7 @@ export const projects = [
     },
   },
   {
-    id: 3,
+    id: 4,
     slug: 'child-of-weather',
     name: 'ChildOfWeather',
     summary:
@@ -127,7 +162,44 @@ export const projects = [
     },
   },
   {
-    id: 4,
+    id: 5,
+    slug: 'heyum',
+    name: '헤윰 (Heyum) - AI 프롬프트 번역',
+    summary:
+      'AI 프롬프트의 의도를 정확하게 반영하는 번역 서비스 및 브라우저 확장 프로그램',
+    types: ['frontend', 'tooling'],
+    stacks: ['React', 'Vite', 'TailwindCSS', 'Chrome Extension API'],
+    status: 'paused',
+    stats: { frontend: 85, backend: 8, cs: 45, ux: 90 },
+    period: '2026.05 - 2026.05 (중단)',
+    role: '랜딩 페이지 구성 및 브라우저 확장 프로그램 개발',
+    tech: [
+      'React',
+      'Vite',
+      'TailwindCSS',
+      'Chrome Extension API',
+      'JavaScript/TypeScript',
+    ],
+    highlights: [
+      'AI 프롬프트 번역에 최적화된 랜딩 페이지 기획 및 개발',
+      '브라우저 어디서나 프롬프트를 번역할 수 있는 크롬 확장 프로그램 구현',
+      '사용자 친화적인 UI/UX 설계를 통해 번역 접근성 향상',
+    ],
+    responsibilities:
+      '서비스의 첫인상을 결정하는 랜딩 페이지를 직접 구성하고 개발했으며, 실질적인 도구로서 사용될 브라우저 확장 프로그램을 Chrome Extension API를 활용해 구현했습니다.',
+    description:
+      '헤윰(Heyum)은 AI와 소통할 때 가장 중요한 "프롬프트"의 의미가 번역 과정에서 왜곡되지 않도록 돕는 서비스입니다. 웹 페이지 형태의 랜딩 서비스와 더불어, 사용자가 ChatGPT나 Claude 등을 사용할 때 즉시 번역 기능을 활용할 수 있도록 브라우저 확장 프로그램을 함께 개발하여 편의성을 극대화했습니다.',
+    links: {
+      demo: '',
+      repo: 'https://github.com/minsik1014/Heyum',
+      video: [
+        { title: 'Web', url: '/playEx/heyum_web.mov' },
+        { title: '프로그램', url: '/playEx/heyum_program.mov' },
+      ],
+    },
+  },
+  {
+    id: 6,
     slug: 'sign-language-translator',
     name: '수어(수화) 번역 웹 앱',
     summary: '수어 번역 UI 프로토타입 (기획/프론트 단계, 중단)',
@@ -154,7 +226,7 @@ export const projects = [
     },
   },
   {
-    id: 5,
+    id: 7,
     slug: 'livecoder',
     name: 'LiveCoder (실시간 코딩 협업 플랫폼)',
     summary:
@@ -190,7 +262,7 @@ export const projects = [
     },
   },
   {
-    id: 6,
+    id: 8,
     slug: 'pokemon-data-dashboard',
     name: '포켓몬 데이터 분석 대시보드 (Streamlit)',
     summary:
@@ -218,7 +290,7 @@ export const projects = [
     },
   },
   {
-    id: 7,
+    id: 9,
     slug: 'lifecontrol',
     name: 'LifeControl',
     summary:
@@ -246,7 +318,7 @@ export const projects = [
     },
   },
   {
-    id: 8,
+    id: 10,
     slug: 'namtang-mypage-demo',
     name: 'NAMTANG 마이페이지 데모',
     summary:
@@ -275,3 +347,4 @@ export const projects = [
     },
   },
 ]
+

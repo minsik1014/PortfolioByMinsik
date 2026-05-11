@@ -63,7 +63,7 @@ const PokedexCard = ({ project }) => {
 
       <div className="mt-4 flex flex-wrap gap-2">
         {stacks.length === 0 ? (
-          <Badge label="스택을 추가하세요" />
+          <Badge label="준비 중" />
         ) : (
           stacks.map((stack) => <Badge key={stack} label={stack} />)
         )}

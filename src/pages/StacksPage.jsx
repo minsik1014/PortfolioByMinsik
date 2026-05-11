@@ -1,3 +1,6 @@
+import { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
+
 const stacksData = [
   {
     category: 'Language',
@@ -32,15 +35,29 @@ const stacksData = [
 ]
 
 const StacksPage = () => {
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <section className="space-y-6">
-      <header className="space-y-2">
-        <p className="text-xs uppercase tracking-[0.2em] text-amber-600 dark:text-amber-200 transition-colors">
-          Stacks
-        </p>
-        <h1 className="text-3xl font-black text-slate-900 dark:text-white transition-colors">
-          사용해본 기술 스택
-        </h1>
+      <header className="space-y-4">
+        <button
+          onClick={() => navigate(-1)}
+          className="flex items-center gap-2 text-sm font-bold text-amber-600 dark:text-amber-200 transition hover:text-amber-500 dark:hover:text-amber-100"
+        >
+          ← 뒤로 가기
+        </button>
+        <div className="space-y-2">
+          <p className="text-xs uppercase tracking-[0.2em] text-amber-600 dark:text-amber-200 transition-colors">
+            Stacks
+          </p>
+          <h1 className="text-3xl font-black text-slate-900 dark:text-white transition-colors">
+            사용해본 기술 스택
+          </h1>
+        </div>
       </header>
 
       <div className="overflow-hidden rounded-3xl border border-slate-900/10 dark:border-white/10 bg-white dark:bg-white/5 shadow-lg shadow-slate-200/50 dark:shadow-cyan-500/10 backdrop-blur transition-colors">

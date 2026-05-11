@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom'
 import Badge from '../components/common/Badge'
 import StatBar from '../components/common/StatBar'
+import { projects } from '../data/projects'
 
 const HomePage = () => {
+  const frontendCount = projects.filter((p) => p.types.includes('frontend')).length
+  const backendCount = projects.filter((p) => p.types.includes('backend')).length
+  const fullstackCount = projects.filter((p) => p.types.includes('fullstack')).length
+  const totalCount = projects.length
+
   return (
     <section className="grid gap-10 lg:grid-cols-2 lg:items-center">
       <div className="space-y-6">
@@ -31,8 +37,10 @@ const HomePage = () => {
           </Link>
         </div>
         <div className="flex flex-wrap gap-2">
-          <Badge label="Frontend x 7" variant="frontend" />
-          <Badge label="Backend x 1" variant="backend" />
+          <Badge label={`Frontend x ${frontendCount}`} variant="frontend" />
+          <Badge label={`Backend x ${backendCount}`} variant="backend" />
+          {fullstackCount > 0 && <Badge label={`Fullstack x ${fullstackCount}`} variant="fullstack" />}
+          <Badge label={`Total x ${totalCount}`} />
         </div>
       </div>
 
@@ -62,7 +70,7 @@ const HomePage = () => {
             <div className="flex items-center justify-between text-xs text-amber-100">
               <span>현재 상태</span>
               <span className="font-semibold text-white">
-                Frontend 7 · Backend 1 (도감 기준)
+                Frontend {frontendCount} · Backend {backendCount} (도감 {totalCount}개 기준)
               </span>
             </div>
             <div className="mt-3 grid gap-2">

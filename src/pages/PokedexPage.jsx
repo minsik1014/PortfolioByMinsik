@@ -54,7 +54,7 @@ const PokedexPage = () => {
 
       {filtered.length === 0 ? (
         <div className="rounded-2xl border border-dashed border-slate-900/20 dark:border-white/20 bg-slate-900/5 dark:bg-white/5 p-6 text-center text-slate-600 dark:text-slate-300 transition-colors">
-          아직 등록된 프로젝트가 없습니다. 엔트리를 추가해 주세요.
+          프로젝트 정보를 준비 중입니다.
         </div>
       ) : (
         <PokedexGrid projects={filtered} />

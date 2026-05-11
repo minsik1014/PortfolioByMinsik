@@ -5,11 +5,26 @@ import StatBar from '../components/common/StatBar'
 
 const experiences = [
   {
-    id: 'scout-startup',
-    title: '2025 SCOUT BOOTSTUP 스타트업 경진대회 – 대상',
+    id: 'rise-2026',
+    title: '2026 구로구 RISE 리빙랩 사업 – 다국어 민원행정 서비스 (Gusring)',
+    period: '2026 - 진행 중',
+    role: '프런트엔드 개발 · 배포 및 최적화 · 다국어 서식 분류 구조 설계',
+    detail: '다국어 민원행정 서식 폼을 제공하는 서비스의 프런트엔드를 담당하여 서비스 배포, 성능 최적화 및 언어별 서식 분류 체계를 구축함.',
+  },
+  {
+    id: 'rise-2025',
+    title: '2025 구로구 RISE 리빙랩 사업 – 우수상',
     period: '2025',
-    role: '서비스 기획 및 비즈니스 모델 수립',
-    detail: '4개 대학 주관 창업경진대회에 참가하여 독창적인 아이디어와 비즈니스 모델의 가능성을 인정받아 대상 수상.',
+    role: '지역 문제 해결 서비스 기획 및 요구사항 정의',
+    detail:
+      '지역 문제 해결을 위한 디지털 서비스 방향성을 논의하고 기획 초기 단계부터 참여하여 우수상 수상.',
+  },
+  {
+    id: 'scout-startup',
+    title: '2025 SCOUT BOOTSTUP 스타트업 경진대회 – 최우수상',
+    period: '2025',
+    role: '팀 프로젝트 참여 및 서비스 프로토타입 구현 지원',
+    detail: '4개 대학 주관 창업경진대회에 참가하여 독창적인 아이디어와 비즈니스 모델의 가능성을 인정받아 최우수상 수상.',
   },
   {
     id: 'umc-demo',
@@ -50,14 +65,6 @@ const experiences = [
     detail:
       '교내 프로젝트를 기반으로 전시용 자료를 준비하고, 방문자·평가자에게 서비스 컨셉과 기능을 설명하며 피드백 수집.',
   },
-  {
-    id: 'rise-2025',
-    title: '구로구 RISE 사업 – 우수상',
-    period: '2025',
-    role: '지역 문제 해결 서비스 기획 및 요구사항 정의',
-    detail:
-      '지역 문제 해결을 위한 디지털 서비스 방향성을 논의하고 기획 초기 단계부터 참여하여 우수상 수상.',
-  },
 ]
 
 const AboutPage = () => {
@@ -90,6 +97,7 @@ const AboutPage = () => {
           </div>
           <ul className="list-disc space-y-1 pl-5 text-sm text-slate-600 dark:text-slate-300 transition-colors">
             <li>동양미래대학교 컴퓨터소프트웨어공학과 3학년 재학중</li>
+            <li>2026 컴퓨터소프트웨어공학과 학생회 소통부장</li>
             <li>동양미래대학교 컴퓨터소프트웨어공학과 전공동아리 EL 23기</li>
             <li>동양미래대학교 UMC-9th 파트원</li>
             <li>동양미래대학교 UMC-9th PlayProof 팀장</li>
@@ -124,15 +132,15 @@ const AboutPage = () => {
         <div className="rounded-3xl border border-slate-900/10 dark:border-white/10 bg-gradient-to-b from-emerald-500/5 to-slate-100 dark:from-emerald-500/10 dark:to-slate-900/80 p-6 shadow-lg shadow-emerald-500/10 dark:shadow-emerald-500/20 transition-colors">
           <h2 className="text-xl font-bold text-slate-900 dark:text-white transition-colors">Battle Stats</h2>
           <div className="mt-4 grid gap-3">
-            <StatBar label="Frontend" value={78} />
-            <StatBar label="Backend" value={60} />
-            <StatBar label="Architecture" value={65} />
+            <StatBar label="Frontend" value={85} />
+            <StatBar label="Backend" value={45} />
+            <StatBar label="Architecture" value={75} />
             <StatBar label="CS" value={58} />
           </div>
         </div>
       </div>
 
-      <div className="grid gap-6 lg:grid-cols-3">
+      <div className="grid gap-6 lg:grid-cols-3 items-start">
         <div className="space-y-4 rounded-3xl border border-slate-900/10 dark:border-white/10 bg-white dark:bg-white/5 p-6 shadow-lg shadow-slate-200/50 dark:shadow-cyan-500/10 backdrop-blur lg:col-span-2 transition-colors">
           <h2 className="text-xl font-bold text-slate-900 dark:text-white transition-colors">About Me</h2>
           <div className="space-y-3 text-slate-700 dark:text-slate-200 transition-colors">
@@ -149,7 +157,7 @@ const AboutPage = () => {
               있다는 자신감과 실행력을 가지고 있습니다.
             </p>
             <p>
-              최근에는 2025 SCOUT BOOTSTUP 스타트업 경진대회 대상, 9th UMC DEMO DAY 우수상, 구로구 RISE 사업 우수상 등 다양한 대회와 사업에서 성과를 거두며 기획부터 구현까지의 역량을 증명하고 있습니다. 특히 UMC 9기 데모데이 당시 웹 팀장을 맡아 팀원들을 이끌며 협업을 주도하고 프로젝트를 성공적으로 완수한 경험이 있습니다. 서비스 기획–설계–구현까지 전체 흐름을 이해하고 참여하는 개발자가 되고 싶습니다. 다양한 프로젝트로 쌓은 경험과 성실함을 바탕으로, 팀에 오래 함께 가도 부담 없는, 믿고 맡길 수 있는 개발자가 되는 것이 목표입니다.
+              최근에는 2025 SCOUT BOOTSTUP 스타트업 경진대회 최우수상, 9th UMC DEMO DAY 우수상, 구로구 RISE 리빙랩 사업 우수상 등 다양한 대회와 사업에서 성과를 거두며 기획부터 구현까지의 역량을 증명하고 있습니다. 특히 UMC 9기 데모데이 당시 웹 팀장을 맡아 팀원들을 이끌며 협업을 주도하고 프로젝트를 성공적으로 완수한 경험이 있습니다. 서비스 기획–설계–구현까지 전체 흐름을 이해하고 참여하는 개발자가 되고 싶습니다. 다양한 프로젝트로 쌓은 경험과 성실함을 바탕으로, 팀에 오래 함께 가도 부담 없는, 믿고 맡길 수 있는 개발자가 되는 것이 목표입니다.
             </p>
           </div>
         </div>
@@ -171,23 +179,11 @@ const AboutPage = () => {
             </div>
             <div>
               <p className="font-semibold text-slate-900 dark:text-white transition-colors">Frontend</p>
-              <p>React, Vite, TailwindCSS, React Router</p>
+              <p>React(SPA), Vite, TailwindCSS, React Router, 상태 관리 및 폼 처리 최적화</p>
             </div>
             <div>
-              <p className="font-semibold text-slate-900 dark:text-white transition-colors">Backend</p>
-              <p>Java Servlet/JSP, MVC 패턴, JDBC</p>
-            </div>
-            <div>
-              <p className="font-semibold text-slate-900 dark:text-white transition-colors">Database</p>
-              <p>MySQL, ERD 설계, 정규화, 기본 SQL 튜닝</p>
-            </div>
-            <div>
-              <p className="font-semibold text-slate-900 dark:text-white transition-colors">DevOps / Tools</p>
-              <p>Git &amp; GitHub (branch 전략, reset/revert 경험), Maven, Node.js, npm, Streamlit, VSCode, IntelliJ, Eclipse, Android Studio</p>
-            </div>
-            <div>
-              <p className="font-semibold text-slate-900 dark:text-white transition-colors">Etc.</p>
-              <p>Figma/UI 설계 경험, Notion으로 문서화/정리</p>
+              <p className="font-semibold text-slate-900 dark:text-white transition-colors">UI / UX</p>
+              <p>Figma 설계 기반 구현, 디자인 시스템 준수, 사용성(피드백/로딩/에러) 고려, 반응형 레이아웃</p>
             </div>
           </div>
         </div>
@@ -199,7 +195,7 @@ const AboutPage = () => {
           <div className="space-y-4">
             {experiences.length === 0 ? (
               <div className="rounded-2xl border border-dashed border-slate-900/20 dark:border-white/20 bg-slate-100 dark:bg-slate-900/50 p-4 text-sm text-slate-500 dark:text-slate-300 transition-colors">
-                경험/활동을 채워 넣어주세요.
+                경험 및 활동 정보를 준비 중입니다.
               </div>
             ) : (
               experiences.map((exp) => (

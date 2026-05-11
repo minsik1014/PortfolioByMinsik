@@ -1,7 +1,9 @@
 import { useParams, useNavigate } from 'react-router-dom'
+import { useEffect } from 'react'
 
 // 나중에 실제 상장 이미지 경로로 업데이트하세요.
 const awardImages = {
+  'rise-2026': '/playEx/rise-2026.jpg',
   'scout-startup': '/playEx/scout-startup.jpg',
   'umc-demo': '/playEx/umc-demo.jpg',
   'kes-2025': '/playEx/kes-2025.jpg',
@@ -12,13 +14,14 @@ const awardImages = {
 }
 
 const awardTitles = {
-  'scout-startup': '2025 SCOUT BOOTSTUP 스타트업 경진대회 – 대상',
+  'rise-2026': '2026 구로구 RISE 리빙랩 사업 – 다국어 민원행정 서비스',
+  'scout-startup': '2025 SCOUT BOOTSTUP 스타트업 경진대회 – 최우수상',
   'umc-demo': '9th UMC DEMO DAY – 우수상',
   'kes-2025': '한국전자전(KES 2025) – 산업 안전교육 플랫폼 출전',
   'ideal-2025': '전공 동아리 하계 프로젝트 IDEAL – 협업 코딩 플랫폼',
   'expo-2025': '동양미래대학교 EXPO 2025 – 우수상',
   'g-valley': '동양미래대학교 G-Valley 작품 참가',
-  'rise-2025': '구로구 RISE 사업 – 우수상',
+  'rise-2025': '2025 구로구 RISE 리빙랩 사업 – 우수상',
 }
 
 const AwardDetailPage = () => {
@@ -26,6 +29,10 @@ const AwardDetailPage = () => {
   const navigate = useNavigate()
   const imageSrc = awardImages[id]
   const title = awardTitles[id] || 'Certificate'
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [id])
 
   return (
     <div className="flex min-h-[60vh] flex-col items-center justify-center space-y-6 py-10 transition-colors">

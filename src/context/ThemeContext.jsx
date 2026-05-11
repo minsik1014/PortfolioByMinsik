@@ -8,7 +8,7 @@ export const ThemeProvider = ({ children }) => {
     const saved = localStorage.getItem('theme');
     if (saved) return saved === 'dark';
     
-    // 2. LocalStorage 없으면 시스템 설정 확인 (선택 사항, 여기서는 기본 다크모드)
+    // 2. 기본값은 다크모드
     return true; 
   });
 

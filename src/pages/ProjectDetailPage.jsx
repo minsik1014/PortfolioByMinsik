@@ -1,4 +1,5 @@
 import { Link, useParams } from 'react-router-dom'
+import { useEffect } from 'react'
 import Badge from '../components/common/Badge'
 import StatBar from '../components/common/StatBar'
 import { projects } from '../data/projects'
@@ -6,6 +7,10 @@ import { projects } from '../data/projects'
 const ProjectDetailPage = () => {
   const { slug } = useParams()
   const project = projects.find((item) => item.slug === slug)
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [slug])
 
   if (!project) {
     return (
@@ -113,7 +118,7 @@ const ProjectDetailPage = () => {
             <h2 className="text-xl font-bold text-slate-900 dark:text-white transition-colors">Highlights</h2>
             <ul className="space-y-2 text-slate-700 dark:text-slate-200 transition-colors">
               {(project.highlights ?? []).length === 0 ? (
-                <li className="text-slate-400 dark:text-slate-500">하이라이트를 입력하세요.</li>
+                <li className="text-slate-400 dark:text-slate-500">주요 특징을 정리 중입니다.</li>
               ) : (
                 project.highlights.map((item) => (
                   <li key={item} className="flex gap-3">
@@ -126,7 +131,7 @@ const ProjectDetailPage = () => {
             <div className="rounded-2xl bg-slate-100 dark:bg-slate-900/50 p-4 text-sm text-slate-700 dark:text-slate-200 border border-slate-900/5 dark:border-white/10 transition-colors">
               <p className="font-semibold text-slate-900 dark:text-white transition-colors">맡은 역할</p>
               <p className="mt-1 text-slate-600 dark:text-slate-300 transition-colors">
-                {project.responsibilities || '맡은 역할을 입력하세요.'}
+                {project.responsibilities || '담당 업무 내용을 정리 중입니다.'}
               </p>
             </div>
           </div>
@@ -134,35 +139,49 @@ const ProjectDetailPage = () => {
           <div className="grid gap-4 rounded-3xl border border-slate-900/10 dark:border-white/10 bg-white dark:bg-white/5 p-6 shadow-lg shadow-slate-200/50 dark:shadow-amber-500/10 backdrop-blur transition-colors">
             <h2 className="text-xl font-bold text-slate-900 dark:text-white transition-colors">실행 영상</h2>
             {project.links?.video ? (
-              <div className="space-y-3">
-                <div className="overflow-hidden rounded-2xl border border-slate-900/10 dark:border-white/10 bg-black aspect-video transition-colors">
-                  {project.links.video.includes('youtube.com') || project.links.video.includes('youtu.be') ? (
-                    <iframe
-                      src={
-                        project.links.video.includes('watch?v=')
-                          ? project.links.video.replace('watch?v=', 'embed/')
-                          : project.links.video.replace('youtu.be/', 'www.youtube.com/embed/')
-                      }
-                      title={`${project.name} 실행 영상`}
-                      className="h-full w-full border-0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                    />
-                  ) : (
-                    <video
-                      src={project.links.video}
-                      controls
-                      className="h-auto w-full"
-                      preload="metadata"
-                    >
-                      브라우저에서 비디오를 재생할 수 없습니다.
-                    </video>
-                  )}
-                </div>
+              <div className="space-y-6">
+                {(Array.isArray(project.links.video) ? project.links.video : [project.links.video]).map((v, idx) => {
+                  const videoUrl = typeof v === 'string' ? v : v.url
+                  const videoTitle = typeof v === 'string' ? null : v.title
+
+                  return (
+                    <div key={idx} className="space-y-2">
+                      {videoTitle && (
+                        <p className="text-sm font-bold text-amber-600 dark:text-amber-200 ml-1">
+                          {videoTitle}
+                        </p>
+                      )}
+                      <div className="overflow-hidden rounded-2xl border border-slate-900/10 dark:border-white/10 bg-black aspect-video transition-colors">
+                        {videoUrl.includes('youtube.com') || videoUrl.includes('youtu.be') ? (
+                          <iframe
+                            src={
+                              videoUrl.includes('watch?v=')
+                                ? videoUrl.replace('watch?v=', 'embed/')
+                                : videoUrl.replace('youtu.be/', 'www.youtube.com/embed/')
+                            }
+                            title={`${project.name} 실행 영상 ${idx + 1}`}
+                            className="h-full w-full border-0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                          />
+                        ) : (
+                          <video
+                            src={videoUrl}
+                            controls
+                            className="h-full w-full object-contain"
+                            preload="metadata"
+                          >
+                            브라우저에서 비디오를 재생할 수 없습니다.
+                          </video>
+                        )}
+                      </div>
+                    </div>
+                  )
+                })}
               </div>
             ) : (
               <div className="flex items-center justify-between rounded-2xl border border-slate-900/10 dark:border-white/10 bg-slate-100 dark:bg-slate-900/50 px-4 py-3 text-sm text-slate-400 dark:text-slate-500 transition-colors">
-                실행 영상을 추가해 주세요.
+                실행 영상을 준비 중입니다.
               </div>
             )}
           </div>
@@ -216,7 +235,7 @@ const ProjectDetailPage = () => {
             <div className="mt-2 flex flex-wrap gap-2">
               {(project.tech ?? []).length === 0 ? (
                 <span className="text-sm text-slate-400 dark:text-slate-500">
-                  스택을 입력하세요.
+                  기술 스택 정보를 정리 중입니다.
                 </span>
               ) : (
                 project.tech.map((item) => <Badge key={item} label={item} />)
