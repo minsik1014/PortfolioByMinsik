@@ -9,10 +9,12 @@ const HomePage = () => {
   const fullstackCount = projects.filter((p) => p.types.includes('fullstack')).length
   const totalCount = projects.length
 
+  const commonCardStyle = "rounded-3xl border border-slate-900/10 dark:border-white/10 bg-gradient-to-b from-emerald-500/5 to-slate-50 dark:from-cyan-500/10 dark:to-slate-900/80 p-6 shadow-lg shadow-emerald-500/5 dark:shadow-cyan-500/10 backdrop-blur transition-all"
+
   return (
     <section className="grid gap-10 lg:grid-cols-2 lg:items-center">
       <div className="space-y-6">
-        <div className="inline-flex items-center gap-2 rounded-full border border-amber-500/40 bg-amber-500/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-amber-600 dark:text-amber-200 transition-colors">
+        <div className="inline-flex items-center gap-2 rounded-full border border-red-500/40 bg-red-500/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-red-600 dark:text-red-400 transition-colors">
           Pokédex Portfolio
         </div>
         <h1 className="text-5xl font-black leading-[1.1] text-slate-900 dark:text-white sm:text-5xl transition-colors">
@@ -25,13 +27,13 @@ const HomePage = () => {
         <div className="flex flex-wrap gap-3">
           <Link
             to="/pokedex"
-            className="rounded-full bg-amber-400 px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-amber-300 shadow-lg shadow-amber-500/20"
+            className="rounded-full bg-gradient-to-r from-red-700 to-red-600 px-6 py-3 text-sm font-semibold text-white transition hover:from-red-600 hover:to-red-500 shadow-lg shadow-red-900/20 dark:shadow-red-900/40"
           >
             도감 열기 (Pokedex)
           </Link>
           <Link
             to="/about"
-            className="rounded-full border border-slate-900/20 dark:border-white/20 px-6 py-3 text-sm font-semibold text-slate-900 dark:text-white transition hover:border-cyan-500/60 hover:text-cyan-600 dark:hover:text-cyan-100"
+            className="rounded-full border border-slate-900/10 dark:border-white/10 bg-white/50 dark:bg-white/5 px-6 py-3 text-sm font-semibold text-slate-900 dark:text-white transition hover:border-red-500/50 hover:text-red-700 dark:hover:text-red-400 shadow-sm"
           >
             트레이너 정보
           </Link>
@@ -44,7 +46,8 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div className="relative rounded-3xl border-4 border-red-900 bg-gradient-to-br from-[#b80f1f] via-[#c91c2f] to-[#8b0c18] p-6 shadow-2xl shadow-red-600/30">
+      {/* Pokédex Red Lens Section */}
+      <div className="relative rounded-3xl border-4 border-red-900 bg-gradient-to-br from-[#b80f1f] via-[#c91c2f] to-[#8b0c18] dark:from-[#7f1d1d] dark:via-[#991b1b] dark:to-[#450a0a] p-6 shadow-2xl shadow-red-600/30 dark:shadow-red-900/50">
         <div className="absolute inset-0 rounded-[24px] border-2 border-red-300/30" />
         <div className="absolute -left-4 top-6 h-16 w-16 rounded-full bg-cyan-300/40 blur-2xl" />
         <div className="absolute right-6 top-6 flex gap-2">
@@ -53,20 +56,20 @@ const HomePage = () => {
           <span className="h-3 w-3 rounded-full bg-[#22c55e]" />
         </div>
         <div className="flex flex-col gap-4">
-          <p className="text-sm uppercase tracking-[0.2em] text-amber-100">
+          <p className="text-sm uppercase tracking-[0.2em] text-amber-100 font-bold">
             Pokedex Lens
           </p>
           <Link
             to="/pokedex"
-            className="group relative flex h-64 items-center justify-center overflow-hidden rounded-2xl border-4 border-red-200/60 bg-[#0b0f1a] shadow-inner shadow-red-900/50 transition hover:-translate-y-1 hover:shadow-red-500/50"
+            className="group relative flex h-64 items-center justify-center overflow-hidden rounded-2xl border-4 border-red-200/60 dark:border-red-900/60 bg-[#0b0f1a] shadow-inner shadow-red-900/50 transition hover:-translate-y-1 hover:shadow-red-500/50"
           >
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(248,113,113,0.25),transparent_55%)]" />
-            <div className="h-36 w-36 rounded-full border-[10px] border-[#f59e0b] bg-gradient-to-br from-slate-800 via-slate-700 to-slate-900 shadow-lg shadow-amber-300/30 transition group-hover:scale-105" />
+            <div className="h-36 w-36 rounded-full border-[10px] border-[#f59e0b] dark:border-red-600 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-900 shadow-lg shadow-amber-300/30 dark:shadow-red-500/20 transition group-hover:scale-105" />
             <div className="absolute bottom-4 rounded-full bg-red-500/20 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-amber-100 border border-red-200/40">
               Click · Pokedex
             </div>
           </Link>
-          <div className="rounded-2xl border-2 border-red-200/40 bg-[#0f172a]/80 p-4 shadow-inner shadow-red-900/30">
+          <div className="rounded-2xl border-2 border-red-200/40 dark:border-red-900/40 bg-[#0f172a]/80 p-4 shadow-inner shadow-red-900/30">
             <div className="flex items-center justify-between text-xs text-amber-100">
               <span>현재 상태</span>
               <span className="font-semibold text-white">

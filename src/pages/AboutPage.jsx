@@ -68,31 +68,26 @@ const experiences = [
 ]
 
 const AboutPage = () => {
+  const commonCardStyle = "rounded-3xl border border-slate-900/10 dark:border-white/10 bg-gradient-to-b from-emerald-500/5 to-slate-50 dark:from-cyan-500/10 dark:to-slate-900/80 p-6 shadow-lg shadow-emerald-500/5 dark:shadow-cyan-500/10 backdrop-blur transition-all"
+
   return (
     <section className="space-y-8">
       <div className="grid gap-6 lg:grid-cols-3 items-start">
-        <div className="space-y-4 rounded-3xl border border-slate-900/10 dark:border-white/10 bg-white dark:bg-white/5 p-6 shadow-lg shadow-slate-200/50 dark:shadow-cyan-500/10 backdrop-blur lg:col-span-2 transition-colors">
-          <p className="text-xs uppercase tracking-[0.2em] text-amber-600 dark:text-amber-200 transition-colors">
+        {/* Trainer Card */}
+        <div className={`${commonCardStyle} lg:col-span-2 space-y-4`}>
+          <p className="text-xs uppercase tracking-[0.2em] text-emerald-600 dark:text-cyan-400 font-bold transition-colors">
             Trainer Card
           </p>
           <h1 className="text-3xl font-black text-slate-900 dark:text-white transition-colors">Elric-심민식</h1>
-          <p className="text-lg font-semibold text-amber-700 dark:text-amber-200 transition-colors">
-            다양한 프로젝트를 진행해보며 실무능력을 키우고 있는 프런트엔드 개발자 Elric/심민식입니다.
+          <p className="text-lg font-semibold text-slate-800 dark:text-slate-200 transition-colors">
+            다양한 프로젝트를 진행해보며 실무능력을 키우고 있는 프런트엔드 개발자 심민식입니다.
           </p>
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-            <div className="flex items-center justify-center overflow-hidden rounded-2xl border border-slate-900/10 dark:border-white/10 bg-slate-100 dark:bg-slate-900/50 p-2 transition-colors">
-              <img
-                src={trainerPhoto}
-                alt="트레이너 심민식 프로필"
-                className="w-full max-h-80 rounded-xl object-contain"
-              />
+            <div className="flex items-center justify-center overflow-hidden rounded-2xl border border-slate-200 dark:border-white/10 bg-white/50 dark:bg-slate-900/50 p-2">
+              <img src={trainerPhoto} alt="프로필 1" className="w-full max-h-80 rounded-xl object-contain" />
             </div>
-            <div className="flex items-center justify-center overflow-hidden rounded-2xl border border-slate-900/10 dark:border-white/10 bg-slate-100 dark:bg-slate-900/50 p-2 transition-colors">
-              <img
-                src={trainerPhoto2}
-                alt="트레이너 심민식 프로필 2"
-                className="w-full max-h-80 rounded-xl object-contain"
-              />
+            <div className="flex items-center justify-center overflow-hidden rounded-2xl border border-slate-200 dark:border-white/10 bg-white/50 dark:bg-slate-900/50 p-2">
+              <img src={trainerPhoto2} alt="프로필 2" className="w-full max-h-80 rounded-xl object-contain" />
             </div>
           </div>
           <ul className="list-disc space-y-1 pl-5 text-sm text-slate-600 dark:text-slate-300 transition-colors">
@@ -103,38 +98,17 @@ const AboutPage = () => {
             <li>동양미래대학교 UMC-9th PlayProof 팀장</li>
             <li>동양미래대학교 UMC-10th 웹 파트장</li>
           </ul>
-          <div className="flex flex-wrap gap-3">
-            <a
-              href="https://github.com/minsik1014/minsik1014"
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-full border border-slate-900/20 dark:border-white/20 bg-slate-100 dark:bg-white/5 px-4 py-2 text-sm font-semibold text-slate-900 dark:text-white transition hover:border-amber-500/60 dark:hover:border-amber-300/60 hover:text-amber-600 dark:hover:text-amber-100"
-            >
-              GitHub
-            </a>
-            
-            <a
-              href="mailto:ms03zzang@naver.com"
-              className="rounded-full border border-amber-300/40 dark:border-white/20 bg-amber-50 dark:bg-amber-300/10 px-4 py-2 text-sm font-semibold text-amber-700 dark:text-amber-100 transition hover:border-amber-400 dark:hover:border-amber-200 hover:bg-amber-100 dark:hover:bg-amber-200/20"
-            >
-              Email
-            </a>
-            <a
-              href="https://www.instagram.com/sharp.sim_03?igsh=MTh0N2Y5amZxZzZ2dw%3D%3D&utm_source=qr"
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-full border border-slate-900/20 dark:border-white/20 bg-gradient-to-r from-pink-500/20 via-orange-400/15 to-yellow-300/15 dark:from-pink-500/40 dark:via-orange-400/30 dark:to-yellow-300/30 px-4 py-2 text-sm font-semibold text-slate-900 dark:text-white transition hover:border-amber-500/60 dark:hover:border-amber-300/60 hover:text-amber-600 dark:hover:text-amber-100"
-            >
-              Instagram
-            </a>
+          <div className="flex flex-wrap gap-3 pt-2">
+            <a href="https://github.com/minsik1014/minsik1014" target="_blank" rel="noreferrer" className="rounded-full border border-slate-200 dark:border-white/20 bg-white/80 dark:bg-white/5 px-4 py-2 text-sm font-semibold text-slate-700 dark:text-white transition hover:border-emerald-500/60 dark:hover:border-cyan-400 hover:text-emerald-600 dark:hover:text-cyan-300 shadow-sm">GitHub</a>
+            <a href="mailto:ms03zzang@naver.com" className="rounded-full border border-slate-200 dark:border-white/20 bg-white/80 dark:bg-white/5 px-4 py-2 text-sm font-semibold text-slate-700 dark:text-white transition hover:border-emerald-500/60 dark:hover:border-cyan-400 hover:text-emerald-600 dark:hover:text-cyan-300 shadow-sm">Email</a>
+            <a href="https://www.instagram.com/sharp.sim_03" target="_blank" rel="noreferrer" className="rounded-full border border-slate-200 dark:border-white/20 bg-white/80 dark:bg-white/5 px-4 py-2 text-sm font-semibold text-slate-700 dark:text-white transition hover:border-emerald-500/60 dark:hover:border-cyan-400 hover:text-emerald-600 dark:hover:text-cyan-300 shadow-sm">Instagram</a>
           </div>
         </div>
-        <div className="rounded-3xl border border-slate-900/10 dark:border-white/10 bg-gradient-to-b from-emerald-500/5 to-slate-100 dark:from-emerald-500/10 dark:to-slate-900/80 p-6 shadow-lg shadow-emerald-500/10 dark:shadow-emerald-500/20 transition-colors">
-          <div className="flex items-center justify-between">
-            <h2 className="text-xl font-bold text-slate-900 dark:text-white transition-colors">Battle Stats</h2>
-            <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-600 dark:text-emerald-400">Level. 23</span>
-          </div>
-          <div className="mt-4 grid gap-3 sm:grid-cols-1">
+
+        {/* Battle Stats */}
+        <div className={commonCardStyle}>
+          <h2 className="text-xl font-bold text-slate-900 dark:text-white transition-colors">Battle Stats</h2>
+          <div className="mt-4 grid gap-3">
             <StatBar label="Frontend" value={85} />
             <StatBar label="UI/UX" value={82} />
             <StatBar label="Collaboration" value={88} />
@@ -143,7 +117,7 @@ const AboutPage = () => {
             <StatBar label="Backend" value={45} />
             <StatBar label="CS" value={58} />
           </div>
-          <div className="mt-6 rounded-2xl bg-white/50 dark:bg-black/20 p-3 border border-emerald-500/10">
+          <div className="mt-6 rounded-2xl bg-white/60 dark:bg-black/20 p-3 border border-slate-100 dark:border-cyan-500/10">
             <p className="text-[10px] uppercase tracking-tighter text-slate-500 dark:text-slate-400 leading-tight">
               * 위 스탯은 프로젝트 경험과 자기 객관화를 바탕으로 산정된 수치이며, 협업과 프런트엔드 기술 구현에 특화되어 있습니다.
             </p>
@@ -152,87 +126,47 @@ const AboutPage = () => {
       </div>
 
       <div className="grid gap-6 lg:grid-cols-3 items-start">
-        <div className="space-y-4 rounded-3xl border border-slate-900/10 dark:border-white/10 bg-white dark:bg-white/5 p-6 shadow-lg shadow-slate-200/50 dark:shadow-cyan-500/10 backdrop-blur lg:col-span-2 transition-colors">
+        {/* About Me */}
+        <div className={`${commonCardStyle} lg:col-span-2 space-y-4`}>
           <h2 className="text-xl font-bold text-slate-900 dark:text-white transition-colors">About Me</h2>
           <div className="space-y-3 text-slate-700 dark:text-slate-200 transition-colors">
-            <p>
-              저는 여러 번의 프로젝트 경험을 통해 꾸준함과 성실함으로 성장해온 웹 개발자 지망생입니다.
-              한국전자전에서 진행된 EXPO 프로젝트에 참여해 실제 전시 환경에서 서비스 기획·구현 과정을 경험했고,
-              교내 전공 동아리의 하계 프로젝트에서도 팀 단위 협업과 일정 관리, 기능 구현을 끝까지 책임지고
-              수행해 본 경험이 있습니다.
-            </p>
-            <p>
-              개인 프로젝트부터 팀 프로젝트까지 다양한 주제의 서비스를 만들면서, “일단 끝까지 만들어서 돌아가게
-              한다”는 마음가짐을 기르려고 했습니다. 새로운 기술을 접해도 포기하지 않고 문서와 예제를 파고들며
-              하나씩 기능을 완성해 나가는 스타일이라, 낯선 스택이나 도메인도 시간을 들여 파고들면 결국 해낼 수
-              있다는 자신감과 실행력을 가지고 있습니다.
-            </p>
-            <p>
-              최근에는 2025 SCOUT BOOTSTUP 스타트업 경진대회 최우수상, 9th UMC DEMO DAY 우수상, 구로구 RISE 리빙랩 사업 우수상 등 다양한 대회와 사업에서 성과를 거두며 기획부터 구현까지의 역량을 증명하고 있습니다. 특히 UMC 9기 데모데이 당시 웹 팀장을 맡아 팀원들을 이끌며 협업을 주도하고 프로젝트를 성공적으로 완수한 경험이 있습니다. 서비스 기획–설계–구현까지 전체 흐름을 이해하고 참여하는 개발자가 되고 싶습니다. 다양한 프로젝트로 쌓은 경험과 성실함을 바탕으로, 팀에 오래 함께 가도 부담 없는, 믿고 맡길 수 있는 개발자가 되는 것이 목표입니다.
-            </p>
+            <p>저는 여러 번의 프로젝트 경험을 통해 꾸준함과 성실함으로 성장해온 웹 개발자 지망생입니다. 한국전자전에서 진행된 EXPO 프로젝트에 참여해 실제 전시 환경에서 서비스 기획·구현 과정을 경험했고, 교내 전공 동아리의 하계 프로젝트에서도 팀 단위 협업과 일정 관리, 기능 구현을 끝까지 책임지고 수행해 본 경험이 있습니다.</p>
+            <p>개인 프로젝트부터 팀 프로젝트까지 다양한 주제의 서비스를 만들면서, “일단 끝까지 만들어서 돌아가게 한다”는 마음가짐을 기르려고 했습니다. 새로운 기술을 접해도 포기하지 않고 문서와 예제를 파고들며 하나씩 기능을 완성해 나가는 스타일이라, 낯선 스택이나 도메인도 시간을 들여 파고들면 결국 해낼 수 있다는 자신감과 실행력을 가지고 있습니다.</p>
+            <p>최근에는 2025 SCOUT BOOTSTUP 스타트업 경진대회 최우수상, 9th UMC DEMO DAY 우수상, 구로구 RISE 리빙랩 사업 우수상 등 다양한 대회와 사업에서 성과를 거두며 기획부터 구현까지의 역량을 증명하고 있습니다. 특히 UMC 9기 데모데이 당시 웹 팀장을 맡아 팀원들을 이끌며 협업을 주도하고 프로젝트를 성공적으로 완수한 경험이 있습니다. 서비스 기획–설계–구현까지 전체 흐름을 이해하고 참여하는 개발자가 되고 싶습니다. 다양한 프로젝트로 쌓은 경험과 성실함을 바탕으로, 팀에 오래 함께 가도 부담 없는, 믿고 맡길 수 있는 개발자가 되는 것이 목표입니다.</p>
           </div>
         </div>
 
-        <div className="rounded-3xl border border-slate-900/10 dark:border-white/10 bg-white dark:bg-white/5 p-6 shadow-lg shadow-slate-200/50 dark:shadow-amber-500/10 backdrop-blur transition-colors">
-          <div className="flex items-center justify-between gap-3">
+        {/* Stacks */}
+        <div className={commonCardStyle}>
+          <div className="flex items-center justify-between gap-3 mb-4">
             <h2 className="text-xl font-bold text-slate-900 dark:text-white transition-colors">Stacks</h2>
-            <Link
-              to="/stacks"
-              className="text-xs font-semibold text-amber-600 dark:text-amber-200 transition hover:text-amber-500 dark:hover:text-amber-100"
-            >
-              더보기 →
-            </Link>
+            <Link to="/stacks" className="text-xs font-semibold text-emerald-600 dark:text-cyan-400 transition hover:text-emerald-700 dark:hover:text-cyan-300 hover:underline">더보기 →</Link>
           </div>
-          <div className="mt-4 space-y-3 text-sm text-slate-700 dark:text-slate-200 transition-colors">
-            <div>
-              <p className="font-semibold text-slate-900 dark:text-white transition-colors">Language</p>
-              <p>Java, JavaScript/TypeScript, Kotlin, Python, C</p>
-            </div>
-            <div>
-              <p className="font-semibold text-slate-900 dark:text-white transition-colors">Frontend</p>
-              <p>React(SPA), Vite, TailwindCSS, React Router, 상태 관리 및 폼 처리 최적화</p>
-            </div>
-            <div>
-              <p className="font-semibold text-slate-900 dark:text-white transition-colors">UI / UX</p>
-              <p>Figma 설계 기반 구현, 디자인 시스템 준수, 사용성(피드백/로딩/에러) 고려, 반응형 레이아웃</p>
-            </div>
+          <div className="space-y-4 text-sm text-slate-700 dark:text-slate-200 transition-colors">
+            <div><p className="font-bold text-slate-900 dark:text-white mb-1">Language</p><p>Java, JavaScript/TypeScript, Kotlin, Python, C</p></div>
+            <div><p className="font-bold text-slate-900 dark:text-white mb-1">Frontend</p><p>React(SPA), Vite, TailwindCSS, React Router</p></div>
+            <div><p className="font-bold text-slate-900 dark:text-white mb-1">UI / UX</p><p>Figma 설계 기반 구현, 반응형 레이아웃</p></div>
           </div>
         </div>
       </div>
 
       <div className="grid gap-6 lg:grid-cols-3">
-        <div className="lg:col-span-2 space-y-3 rounded-3xl border border-slate-900/10 dark:border-white/10 bg-white dark:bg-white/5 p-6 shadow-lg shadow-slate-200/50 dark:shadow-cyan-500/10 backdrop-blur transition-colors">
+        {/* Experience */}
+        <div className={`${commonCardStyle} lg:col-span-2 space-y-4`}>
           <h2 className="text-xl font-bold text-slate-900 dark:text-white transition-colors">Experience / Activity</h2>
           <div className="space-y-4">
-            {experiences.length === 0 ? (
-              <div className="rounded-2xl border border-dashed border-slate-900/20 dark:border-white/20 bg-slate-100 dark:bg-slate-900/50 p-4 text-sm text-slate-500 dark:text-slate-300 transition-colors">
-                경험 및 활동 정보를 준비 중입니다.
-              </div>
-            ) : (
-              experiences.map((exp) => (
-                <Link
-                  key={exp.id}
-                  to={`/awards/${exp.id}`}
-                  className="group block transform-gpu transition-all duration-300 hover:-translate-y-2 hover:rotate-1 hover:scale-[1.02]"
-                >
-                  <div className="rounded-2xl border border-slate-900/10 dark:border-white/10 bg-slate-50 dark:bg-slate-900/50 p-4 shadow-lg ring-1 ring-slate-900/5 dark:ring-white/5 transition-all group-hover:bg-white dark:group-hover:bg-slate-800/80 group-hover:shadow-cyan-500/10 dark:group-hover:shadow-cyan-500/20 group-hover:ring-cyan-500/20 dark:group-hover:ring-cyan-500/30">
-                    <div className="flex flex-wrap items-center justify-between gap-2">
-                      <div className="text-slate-900 dark:text-white font-semibold transition-colors group-hover:text-cyan-600 dark:group-hover:text-cyan-300">
-                        {exp.title}
-                      </div>
-                      <span className="text-xs text-amber-600 dark:text-amber-200 transition-colors">{exp.period}</span>
-                    </div>
-                    <p className="text-sm text-amber-700 dark:text-amber-100/80 transition-colors">{exp.role}</p>
-                    <p className="mt-1 text-sm text-slate-500 dark:text-slate-400 group-hover:text-slate-700 dark:group-hover:text-slate-300 transition-colors">
-                      {exp.detail}
-                    </p>
-                    <div className="mt-2 flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider text-cyan-600 dark:text-cyan-400 opacity-0 transition-opacity group-hover:opacity-100">
-                      View Certificate <span>→</span>
-                    </div>
+            {experiences.map((exp) => (
+              <Link key={exp.id} to={`/awards/${exp.id}`} className="group block transform-gpu transition-all duration-300 hover:-translate-y-1">
+                <div className="rounded-2xl border border-slate-200 dark:border-white/10 bg-white/50 dark:bg-slate-900/40 p-4 shadow-sm ring-1 ring-slate-900/5 dark:ring-white/5 transition-all group-hover:bg-white dark:group-hover:bg-slate-800/80 group-hover:shadow-emerald-500/10 dark:group-hover:shadow-cyan-500/20 group-hover:ring-emerald-500/20 dark:group-hover:ring-cyan-500/30">
+                  <div className="flex flex-wrap items-center justify-between gap-2">
+                    <div className="text-slate-900 dark:text-white font-bold group-hover:text-emerald-600 dark:group-hover:text-cyan-400">{exp.title}</div>
+                    <span className="text-xs font-semibold text-slate-500 dark:text-slate-400 group-hover:text-emerald-600 dark:group-hover:text-cyan-400">{exp.period}</span>
                   </div>
-                </Link>
-              ))
-            )}
+                  <p className="text-sm font-semibold text-slate-600 dark:text-slate-300 mt-1">{exp.role}</p>
+                  <p className="mt-1 text-sm text-slate-500 dark:text-slate-400 group-hover:text-slate-700 dark:group-hover:text-slate-300">{exp.detail}</p>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </div>
