@@ -1,15 +1,28 @@
 import { Link } from 'react-router-dom'
-import trainerPhoto from '../../playEx/minsik.jpeg'
-import trainerPhoto2 from '../../playEx/minsik2.jpeg'
+import trainerPhoto from '../../playEx/IMG_1379.JPG'
 import StatBar from '../components/common/StatBar'
 
 const experiences = [
   {
-    id: 'rise-2026',
-    title: '2026 구로구 RISE 리빙랩 사업 – 다국어 민원행정 서비스 (Gusring)',
+    id: 'ai-rookie-2026',
+    title: '2026 인공지능 루키(AI Rookie) 대회 – 본선 진출',
     period: '2026 - 진행 중',
-    role: '프런트엔드 개발 · 배포 및 최적화 · 다국어 서식 분류 구조 설계',
-    detail: '다국어 민원행정 서식 폼을 제공하는 서비스의 프런트엔드를 담당하여 서비스 배포, 성능 최적화 및 언어별 서식 분류 체계를 구축함.',
+    role: 'Timiroom 프런트엔드 개발 · AI 기반 연결 문서 동기화 구현',
+    detail: '모두의 AI를 위한 전국민 AI 경진대회의 AI ROOKIE 본선에 진출하여, PRD·기능 명세·API 명세·ERD를 연결하고 변경 영향을 AI로 분석·반영하는 문서 기반 협업 플랫폼 Timiroom을 고도화하고 있음.',
+  },
+  {
+    id: 'rise-2026',
+    title: '2026 구로구 RISE 리빙랩 사업 – 최우수상 (Gusring)',
+    period: '2026 - 진행 중',
+    role: '프런트엔드 개발 · 배포 및 최적화 · 금천글로벌빌리지센터 협업 및 현장 적용',
+    detail: '금천글로벌빌리지센터와 협업해 다국어 민원행정 서식 서비스 Gusring을 실제 현장에 적용·운영하고 있으며, 최우수상 수상 이후에도 사용자 피드백을 바탕으로 서비스를 지속적으로 고도화하고 있음.',
+  },
+  {
+    id: 'megacity-2026',
+    title: '2026 도전!메가시티리그전 – 우수상',
+    period: '2026',
+    role: '팀 프로젝트 참여 · 서비스 기획 및 구현',
+    detail: '지역과 산업의 문제를 해결하는 서비스 아이디어를 구체화하고 구현하여 2026 도전!메가시티리그전에서 우수상 수상.',
   },
   {
     id: 'rise-2025',
@@ -82,21 +95,17 @@ const AboutPage = () => {
           <p className="text-lg font-semibold text-slate-800 dark:text-slate-200 transition-colors">
             다양한 프로젝트를 진행해보며 실무능력을 키우고 있는 프런트엔드 개발자 심민식입니다.
           </p>
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-            <div className="flex items-center justify-center overflow-hidden rounded-2xl border border-slate-200 dark:border-white/10 bg-white/50 dark:bg-slate-900/50 p-2">
-              <img src={trainerPhoto} alt="프로필 1" className="w-full max-h-80 rounded-xl object-contain" />
-            </div>
-            <div className="flex items-center justify-center overflow-hidden rounded-2xl border border-slate-200 dark:border-white/10 bg-white/50 dark:bg-slate-900/50 p-2">
-              <img src={trainerPhoto2} alt="프로필 2" className="w-full max-h-80 rounded-xl object-contain" />
-            </div>
+          <div className="mx-auto flex w-full max-w-sm items-center justify-center overflow-hidden rounded-2xl border border-slate-200 bg-white/50 p-2 dark:border-white/10 dark:bg-slate-900/50">
+            <img src={trainerPhoto} alt="심민식 프로필 사진" className="w-full rounded-xl object-contain" />
           </div>
           <ul className="list-disc space-y-1 pl-5 text-sm text-slate-600 dark:text-slate-300 transition-colors">
             <li>동양미래대학교 컴퓨터소프트웨어공학과 3학년 재학중</li>
             <li>2026 컴퓨터소프트웨어공학과 학생회 소통부장</li>
             <li>동양미래대학교 컴퓨터소프트웨어공학과 전공동아리 EL 23기</li>
             <li>동양미래대학교 UMC-9th 파트원</li>
-            <li>동양미래대학교 UMC-9th PlayProof 팀장</li>
+            <li>UMC 9th Demo Day PlayProof 프런트엔드 팀장</li>
             <li>동양미래대학교 UMC-10th 웹 파트장</li>
+            <li>UMC 10th Demo Day Pebble 프런트엔드 팀장</li>
           </ul>
           <div className="flex flex-wrap gap-3 pt-2">
             <a href="https://github.com/minsik1014/minsik1014" target="_blank" rel="noreferrer" className="rounded-full border border-slate-200 dark:border-white/20 bg-white/80 dark:bg-white/5 px-4 py-2 text-sm font-semibold text-slate-700 dark:text-white transition hover:border-emerald-500/60 dark:hover:border-cyan-400 hover:text-emerald-600 dark:hover:text-cyan-300 shadow-sm">GitHub</a>
@@ -132,7 +141,7 @@ const AboutPage = () => {
           <div className="space-y-3 text-slate-700 dark:text-slate-200 transition-colors">
             <p>저는 여러 번의 프로젝트 경험을 통해 꾸준함과 성실함으로 성장해온 웹 개발자 지망생입니다. 한국전자전에서 진행된 EXPO 프로젝트에 참여해 실제 전시 환경에서 서비스 기획·구현 과정을 경험했고, 교내 전공 동아리의 하계 프로젝트에서도 팀 단위 협업과 일정 관리, 기능 구현을 끝까지 책임지고 수행해 본 경험이 있습니다.</p>
             <p>개인 프로젝트부터 팀 프로젝트까지 다양한 주제의 서비스를 만들면서, “일단 끝까지 만들어서 돌아가게 한다”는 마음가짐을 기르려고 했습니다. 새로운 기술을 접해도 포기하지 않고 문서와 예제를 파고들며 하나씩 기능을 완성해 나가는 스타일이라, 낯선 스택이나 도메인도 시간을 들여 파고들면 결국 해낼 수 있다는 자신감과 실행력을 가지고 있습니다.</p>
-            <p>최근에는 2025 SCOUT BOOTSTUP 스타트업 경진대회 최우수상, 9th UMC DEMO DAY 우수상, 구로구 RISE 리빙랩 사업 우수상 등 다양한 대회와 사업에서 성과를 거두며 기획부터 구현까지의 역량을 증명하고 있습니다. 특히 UMC 9기 데모데이 당시 웹 팀장을 맡아 팀원들을 이끌며 협업을 주도하고 프로젝트를 성공적으로 완수한 경험이 있습니다. 서비스 기획–설계–구현까지 전체 흐름을 이해하고 참여하는 개발자가 되고 싶습니다. 다양한 프로젝트로 쌓은 경험과 성실함을 바탕으로, 팀에 오래 함께 가도 부담 없는, 믿고 맡길 수 있는 개발자가 되는 것이 목표입니다.</p>
+            <p>최근에는 2025 SCOUT BOOTSTUP 스타트업 경진대회 최우수상, 9th UMC DEMO DAY 우수상, 2026 구로구 RISE 리빙랩 사업 최우수상, 2026 도전!메가시티리그전 우수상 등 다양한 대회와 사업에서 성과를 거두며 기획부터 구현까지의 역량을 증명하고 있습니다. 특히 RISE 리빙랩 사업은 수상에 그치지 않고, 현재 금천글로벌빌리지센터와 협업해 Gusring을 실제 현장에 적용·운영하며 사용자 피드백을 바탕으로 서비스를 지속적으로 고도화하고 있습니다. 현재는 모두의 AI를 위한 전국민 AI 경진대회의 AI ROOKIE 본선에 진출해 문서 기반 AI 협업 플랫폼 Timiroom을 개발하고 있습니다. 또한 UMC 9기 Demo Day의 PlayProof와 UMC 10기 Demo Day의 Pebble에서 프런트엔드 팀장을 맡아 팀원들을 이끌고, 구조 설계부터 핵심 기능 구현과 협업까지 주도한 경험이 있습니다. 서비스 기획–설계–구현까지 전체 흐름을 이해하고 참여하는 개발자가 되고 싶습니다. 다양한 프로젝트로 쌓은 경험과 성실함을 바탕으로, 팀에 오래 함께 가도 부담 없는, 믿고 맡길 수 있는 개발자가 되는 것이 목표입니다.</p>
           </div>
         </div>
 

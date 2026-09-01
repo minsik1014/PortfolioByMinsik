@@ -50,10 +50,51 @@ export const projects = [
   },
   {
     id: 2,
+    slug: 'pebble',
+    name: 'Pebble (계층형 여정 관리 투두리스트)',
+    summary:
+      'Category → Milestone → Task의 3단계 구조로 목표의 맥락과 핵심 마감을 함께 관리하는 일정 서비스',
+    types: ['frontend'],
+    stacks: ['React', 'TypeScript', 'Zustand', 'TailwindCSS', 'Axios'],
+    status: 'completed',
+    stats: { frontend: 90, backend: 35, cs: 80, ux: 88 },
+    period: '2026.06 - 2026.08 (완료)',
+    role: '프런트엔드 팀장 · 초기 구조 설계 · 홈·메인 캘린더 구현',
+    tech: [
+      'React 18',
+      'TypeScript',
+      'Vite',
+      'Zustand',
+      'TailwindCSS',
+      'Axios',
+      'React Router DOM',
+      'Vitest',
+      'GitHub Actions',
+      'react-easy-crop',
+    ],
+    highlights: [
+      'UMC 10th Demo Day 프로젝트 프런트엔드 팀장으로 개발 및 협업 리드',
+      '기능 중심 아키텍처와 도메인별 API 계층을 설계해 유지보수성과 확장성 확보',
+      '내·친구 캘린더 전환 홈과 Category·Milestone·Task 기반 메인 캘린더 구현',
+      '디자인 토큰 기반 반응형 UI와 공용 이미지 크롭 흐름 구축',
+      '타입 검사·린트·테스트·빌드를 수행하는 GitHub Actions 품질 검증 및 Vercel 배포 흐름 구축',
+    ],
+    responsibilities:
+      '프런트엔드 팀장으로서 저장소 초기 설정과 구조 설계를 맡고, 홈 및 메인 캘린더의 화면·상태·API 흐름을 구현했습니다. 이후 기능 중심 구조로 리팩터링하고 반응형 레이아웃, 핵심 로직 테스트, CI/CD 품질 검증을 정비하며 팀의 개발 기준과 협업 흐름을 이끌었습니다.',
+    description:
+      'Pebble은 복잡한 할 일을 단순히 나열하는 대신 Category → Milestone → Task의 계층으로 구조화해, 지금 하는 일이 어떤 상위 목표를 위한 과정인지 한눈에 보여주는 일정 관리 서비스입니다. 개인 일정 관리를 중심으로 필요한 카테고리를 친구와 공유하고, 활동 기록과 월말 리포트로 목표 달성 과정을 돌아볼 수 있도록 설계했습니다.',
+    links: {
+      demo: 'https://pebble-frontend-six.vercel.app/',
+      repo: 'https://github.com/umc-pebble/Pebble-Frontend',
+      video: 'https://www.youtube.com/watch?v=9-TA3egFrHE',
+    },
+  },
+  {
+    id: 3,
     slug: 'gusring',
     name: 'Gusring (다국어 민원행정 서비스)',
     summary:
-      '외국인 거주자를 위한 다국어 민원행정 서식 폼 제공 및 언어별 서식 분류 서비스',
+      '금천글로벌빌리지센터와 협업해 외국인 거주자에게 다국어 민원행정 서식을 제공하고 실제 현장에서 운영 중인 서비스',
     types: ['frontend'],
     stacks: ['React', 'Vite', 'TailwindCSS', 'Vercel'],
     status: '진행 중',
@@ -68,15 +109,16 @@ export const projects = [
       'Performance Optimization',
     ],
     highlights: [
-      '2026 구로구 RISE 리빙랩 사업 참여 프로젝트',
+      '2026 구로구 RISE 리빙랩 사업 최우수상 수상',
+      '금천글로벌빌리지센터와 협업해 실제 현장에서 서비스를 운영하며 고도화 진행',
       'Vercel을 통한 프런트엔드 배포 환경 구축 및 운영',
       '다양한 언어로 구성된 민원 서식을 체계적으로 분류하고 관리하는 로직 설계',
       'Lighthouse 기반 성능 분석을 통한 프런트엔드 로딩 속도 최적화 기여',
     ],
     responsibilities:
-      'Vercel을 이용한 서비스 배포 및 성능 최적화를 담당하였으며, 여러 언어로 구성된 민원 서식을 효율적으로 분류하고 관리하는 구조를 구현했습니다.',
+      '금천글로벌빌리지센터와 협업하는 프로젝트에서 Vercel을 이용한 서비스 배포와 성능 최적화를 담당했으며, 여러 언어로 구성된 민원 서식을 효율적으로 분류하고 관리하는 구조를 구현했습니다. 현재 실제 현장 사용 과정에서 수집되는 피드백을 반영해 서비스를 지속적으로 고도화하고 있습니다.',
     description:
-      '구스링(Gusring)은 한국 내 외국인 거주자들이 행정 서식을 쉽게 작성할 수 있도록 돕는 서비스입니다. 개발 과정에서 서비스의 안정적인 배포와 빠른 응답 속도를 위한 최적화 작업에 집중했으며, 사용자 편의를 위해 다국어 서식 분류 체계를 구축했습니다.',
+      '구스링(Gusring)은 한국 내 외국인 거주자들이 행정 서식을 쉽게 작성할 수 있도록 돕는 서비스입니다. 2026 구로구 RISE 리빙랩 사업에서 최우수상을 수상했으며, 수상에 그치지 않고 금천글로벌빌리지센터와 협업해 실제 현장에 적용·운영하고 있습니다. 사용자 피드백을 바탕으로 서비스를 지속적으로 고도화하면서 안정적인 배포, 빠른 응답 속도와 다국어 서식 분류 체계 개선에 집중하고 있습니다.',
     links: {
       demo: 'https://gusring-web.vercel.app/',
       repo: 'https://github.com/gusring/gusring-web',
@@ -84,7 +126,7 @@ export const projects = [
     },
   },
   {
-    id: 3,
+    id: 4,
     slug: 'glife-safety-dashboard',
     name: 'GLife (산업안전교육 플랫폼)',
     summary:
@@ -122,7 +164,7 @@ export const projects = [
     },
   },
   {
-    id: 4,
+    id: 5,
     slug: 'child-of-weather',
     name: 'ChildOfWeather',
     summary:
@@ -162,7 +204,7 @@ export const projects = [
     },
   },
   {
-    id: 5,
+    id: 6,
     slug: 'heyum',
     name: '헤윰 (Heyum) - AI 프롬프트 번역',
     summary:
@@ -199,7 +241,7 @@ export const projects = [
     },
   },
   {
-    id: 6,
+    id: 7,
     slug: 'sign-language-translator',
     name: '수어(수화) 번역 웹 앱',
     summary: '수어 번역 UI 프로토타입 (기획/프론트 단계, 중단)',
@@ -226,7 +268,7 @@ export const projects = [
     },
   },
   {
-    id: 7,
+    id: 8,
     slug: 'livecoder',
     name: 'LiveCoder (실시간 코딩 협업 플랫폼)',
     summary:
@@ -262,7 +304,7 @@ export const projects = [
     },
   },
   {
-    id: 8,
+    id: 9,
     slug: 'pokemon-data-dashboard',
     name: '포켓몬 데이터 분석 대시보드 (Streamlit)',
     summary:
@@ -290,7 +332,7 @@ export const projects = [
     },
   },
   {
-    id: 9,
+    id: 10,
     slug: 'lifecontrol',
     name: 'LifeControl',
     summary:
@@ -318,7 +360,7 @@ export const projects = [
     },
   },
   {
-    id: 10,
+    id: 11,
     slug: 'namtang-mypage-demo',
     name: 'NAMTANG 마이페이지 데모',
     summary:
@@ -347,4 +389,3 @@ export const projects = [
     },
   },
 ]
-

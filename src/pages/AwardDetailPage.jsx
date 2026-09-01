@@ -3,7 +3,9 @@ import { useEffect } from 'react'
 
 // 나중에 실제 상장 이미지 경로로 업데이트하세요.
 const awardImages = {
+  'ai-rookie-2026': '/playEx/ai-rookie-2026.jpg',
   'rise-2026': '/playEx/rise-2026.jpg',
+  'megacity-2026': '/playEx/megacity-2026.jpg',
   'scout-startup': '/playEx/scout-startup.jpg',
   'umc-demo': '/playEx/umc-demo.jpg',
   'kes-2025': '/playEx/kes-2025.jpg',
@@ -14,7 +16,9 @@ const awardImages = {
 }
 
 const awardTitles = {
-  'rise-2026': '2026 구로구 RISE 리빙랩 사업 – 다국어 민원행정 서비스',
+  'ai-rookie-2026': '2026 인공지능 루키(AI Rookie) 대회 – 본선 진출',
+  'rise-2026': '2026 구로구 RISE 리빙랩 사업 – 최우수상',
+  'megacity-2026': '2026 도전!메가시티리그전 – 우수상',
   'scout-startup': '2025 SCOUT BOOTSTUP 스타트업 경진대회 – 최우수상',
   'umc-demo': '9th UMC DEMO DAY – 우수상',
   'kes-2025': '한국전자전(KES 2025) – 산업 안전교육 플랫폼 출전',
