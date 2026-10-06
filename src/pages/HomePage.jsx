@@ -9,8 +9,6 @@ const HomePage = () => {
   const fullstackCount = projects.filter((p) => p.types.includes('fullstack')).length
   const totalCount = projects.length
 
-  const commonCardStyle = "rounded-3xl border border-slate-900/10 dark:border-white/10 bg-gradient-to-b from-emerald-500/5 to-slate-50 dark:from-cyan-500/10 dark:to-slate-900/80 p-6 shadow-lg shadow-emerald-500/5 dark:shadow-cyan-500/10 backdrop-blur transition-all"
-
   return (
     <section className="grid gap-10 lg:grid-cols-2 lg:items-center">
       <div className="space-y-6">
