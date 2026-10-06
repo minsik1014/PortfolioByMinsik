@@ -127,6 +127,52 @@ export const projects = [
   },
   {
     id: 4,
+    slug: 'sync-api',
+    name: 'SyncAPI (API 명세·Mock 서버 플랫폼)',
+    summary:
+      'API 명세 관리와 즉시 사용 가능한 Mock 엔드포인트를 통해 프런트엔드·백엔드 간 협업을 지원하는 풀스택 플랫폼',
+    types: ['fullstack', 'frontend', 'backend', 'tooling'],
+    stacks: ['React', 'TypeScript', 'TanStack Query', 'Spring Boot', 'MySQL'],
+    status: 'completed',
+    stats: { frontend: 90, backend: 85, cs: 78, ux: 82 },
+    period: '2026.05 - 2026.06 (완료)',
+    role: '개인 풀스택 개발 · API 명세 및 Mock 서버 구현',
+    tech: [
+      'React 18',
+      'TypeScript',
+      'Vite',
+      'TanStack Query',
+      'Zustand',
+      'Axios',
+      'TailwindCSS 4',
+      'Spring Boot 4',
+      'Java 21',
+      'Spring Security',
+      'Spring Data JPA',
+      'MySQL',
+      'JWT',
+      'Ngrok',
+      'Vercel',
+    ],
+    highlights: [
+      '폴더 트리 기반 API 명세 작성·수정·삭제와 필드 단위 편집 흐름 구현',
+      '작성한 명세를 즉시 호출할 수 있는 Mock API 엔드포인트 및 테스트 기능 구현',
+      '백엔드가 꺼져 있어도 주요 기능을 체험할 수 있는 오프라인 게스트 모드 구축',
+      '프로젝트 멤버·폴더별 권한 관리와 작업 이력 조회 기능 구현',
+      'Vercel 프런트엔드와 로컬 Spring Boot 서버를 Ngrok으로 연결해 풀스택 배포 흐름 구성',
+    ],
+    responsibilities:
+      '개인 프로젝트로 프런트엔드와 백엔드를 모두 구현했습니다. API 명세 편집기와 대시보드, Mock API 테스트, 게스트 모드를 React·TypeScript로 개발하고, Spring Boot·JPA·MySQL 기반의 명세·폴더·멤버·권한·작업 이력 API와 JWT 인증을 연결했습니다.',
+    description:
+      'SyncAPI는 API 문서가 흩어지거나 백엔드 구현을 기다리느라 프런트엔드 개발이 지연되는 문제를 줄이기 위한 협업 플랫폼입니다. 폴더 구조로 API 명세를 관리하고 작성한 명세를 기반으로 Mock 엔드포인트를 제공하며, 팀원과 폴더별 권한 및 변경 이력을 함께 관리합니다. 오프라인 게스트 모드를 제공해 로컬 백엔드가 실행되지 않은 상황에서도 주요 사용자 흐름을 체험할 수 있도록 구성했습니다.',
+    links: {
+      demo: 'https://sync-api-theta.vercel.app/',
+      repo: 'https://github.com/minsik1014/syncAPI',
+      video: '',
+    },
+  },
+  {
+    id: 5,
     slug: 'glife-safety-dashboard',
     name: 'GLife (산업안전교육 플랫폼)',
     summary:
@@ -164,7 +210,7 @@ export const projects = [
     },
   },
   {
-    id: 5,
+    id: 6,
     slug: 'child-of-weather',
     name: 'ChildOfWeather',
     summary:
@@ -204,7 +250,7 @@ export const projects = [
     },
   },
   {
-    id: 6,
+    id: 7,
     slug: 'heyum',
     name: '헤윰 (Heyum) - AI 프롬프트 번역',
     summary:
@@ -241,7 +287,7 @@ export const projects = [
     },
   },
   {
-    id: 7,
+    id: 8,
     slug: 'sign-language-translator',
     name: '수어(수화) 번역 웹 앱',
     summary: '수어 번역 UI 프로토타입 (기획/프론트 단계, 중단)',
@@ -268,7 +314,7 @@ export const projects = [
     },
   },
   {
-    id: 8,
+    id: 9,
     slug: 'livecoder',
     name: 'LiveCoder (실시간 코딩 협업 플랫폼)',
     summary:
@@ -304,7 +350,7 @@ export const projects = [
     },
   },
   {
-    id: 9,
+    id: 10,
     slug: 'pokemon-data-dashboard',
     name: '포켓몬 데이터 분석 대시보드 (Streamlit)',
     summary:
@@ -332,7 +378,7 @@ export const projects = [
     },
   },
   {
-    id: 10,
+    id: 11,
     slug: 'lifecontrol',
     name: 'LifeControl',
     summary:
@@ -360,7 +406,7 @@ export const projects = [
     },
   },
   {
-    id: 11,
+    id: 12,
     slug: 'namtang-mypage-demo',
     name: 'NAMTANG 마이페이지 데모',
     summary:
